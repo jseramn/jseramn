@@ -1,5 +1,4 @@
-# 👋 Hola, soy Juan Serrano
-
+# 👋 Hola, soy José Ramón
 **Software Developer | Tech Support Background | Bilingual (ES / EN)**  
 Construyo soluciones web prácticas y entiendo cómo la tecnología impacta a las personas.
 
