@@ -1,78 +1,91 @@
 # 👋 Hola, soy José Ramón
-**Software Developer | Tech Support Background | Bilingual (ES / EN)**  
-Construyo soluciones web prácticas y entiendo cómo la tecnología impacta a las personas.
+
+Desarrollador Full Stack enfocado en construir **aplicaciones web y herramientas útiles** con Next.js.
+
+Mi camino empezó en hoteles y soporte técnico bilingüe, atendiendo gente, resolviendo problemas bajo presión y coordinando sistemas. Esa experiencia me enseñó a mantener la calma, entender necesidades reales y convertir caos operativo en soluciones claras. Hoy aplico exactamente esa misma mentalidad al desarrollo de productos digitales y pequeñas herramientas SaaS.
+
+Actualmente trabajo con **Next.js, TypeScript, Tailwind CSS, Node.js y Supabase**. Me gusta aprender rápido, automatizar lo que se pueda y crear cosas que realmente sirvan.
 
 ---
 
-## 🧠 Sobre mí
+## 🌐 Socials
 
-Soy desarrollador de software con experiencia previa en **soporte técnico, servicio al cliente y entornos operativos reales**.  
-He trabajado en sectores como tecnología, hospitalidad, BPO y turismo, lo que me dio una base sólida en **comunicación, resolución de problemas y trabajo bajo presión**.
-
-Hoy enfoco esa experiencia en **desarrollo web**, automatización y construcción de soluciones claras, mantenibles y orientadas al usuario.
-
-No escribo código solo para que funcione:  
-👉 me importa que sea **útil, entendible y escalable**.
+[![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/jseramn)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/jseramn)
+[![Medium](https://img.shields.io/badge/Medium-12100E?logo=medium&logoColor=white)](https://medium.com/@jseramn)
+[![X](https://img.shields.io/badge/X-black.svg?logo=X&logoColor=white)](https://x.com/jseramn_)
+[![Email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:contacto@jseramn.tech)
 
 ---
 
-## 🛠 Tech Stack Principal
+## 💻 Tech Stack
 
-Tecnologías con las que trabajo de forma activa:
+### Frontend
+![Next.js](https://img.shields.io/badge/Next.js-black?style=flat-square&logo=next.js&logoColor=white)
+![React](https://img.shields.io/badge/React-%2320232a?style=flat-square&logo=react&logoColor=%2361DAFB)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat-square&logo=typescript&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-%2338B2AC?style=flat-square&logo=tailwind-css&logoColor=white)
+![Radix UI](https://img.shields.io/badge/Radix_UI-161618?style=flat-square&logo=radix-ui&logoColor=white)
 
-- **TypeScript / JavaScript**
-- **Python**
-- **HTML & CSS**
-- **Git & GitHub**
-- **Next.JS**
+### Backend & Database
+![Node.js](https://img.shields.io/badge/Node.js-6DA55F?style=flat-square&logo=node.js&logoColor=white)
+![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=flat-square&logo=supabase&logoColor=white)
 
-Experiencia complementaria en:
+### Deployment & Cloud
+![Vercel](https://img.shields.io/badge/Vercel-black?style=flat-square&logo=vercel&logoColor=white)
 
-- Cloud fundamentals (**Azure, AWS**)
-- Conceptos de **ciberseguridad**
-- Automatización, scripts y tooling
-- Análisis de datos básico (Power BI)
+### DevOps & Tools
+![Git](https://img.shields.io/badge/Git-F05033?style=flat-square&logo=git&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
+![ESLint](https://img.shields.io/badge/ESLint-4B3263?style=flat-square&logo=eslint&logoColor=white)
+![Playwright](https://img.shields.io/badge/Playwright-2EAD33?style=flat-square&logo=playwright&logoColor=white)
+![FFmpeg](https://img.shields.io/badge/FFmpeg-000000?style=flat-square&logo=ffmpeg&logoColor=white)
+![PNPM](https://img.shields.io/badge/pnpm-F69220?style=flat-square&logo=pnpm&logoColor=white)
 
----
-
-## 🔭 En qué estoy enfocado ahora
-
-Actualmente estoy enfocado en:
-
-- Construir proyectos web completos (idea → código → deploy)
-- Mejorar arquitectura y organización de proyectos frontend
-- Escribir código más limpio y mantenible
-- Consolidar bases sólidas en JavaScript moderno y Python
-- Aprender haciendo, no solo estudiando
-
----
-
-## 📂 Sobre este GitHub
-
-En este perfil encontrarás:
-
-- Proyectos personales
-- Experimentos y pruebas técnicas
-- Aplicaciones web pequeñas pero funcionales
-- Repositorios de aprendizaje y documentación
-
-Cada repositorio representa **una etapa de mi crecimiento como desarrollador**.
+### Design
+![Adobe Photoshop](https://img.shields.io/badge/Adobe_Photoshop-31A8FF?style=flat-square&logo=adobe-photoshop&logoColor=white)
+![Adobe Lightroom](https://img.shields.io/badge/Adobe_Lightroom-31A8FF?style=flat-square&logo=adobe-lightroom&logoColor=white)
+![Affinity Designer](https://img.shields.io/badge/Affinity_Designer-1B72BE?style=flat-square&logo=affinity-designer&logoColor=white)
+![Canva](https://img.shields.io/badge/Canva-00C4CC?style=flat-square&logo=canva&logoColor=white)
 
 ---
 
-## 🌍 Idiomas
+## 🌱 What I'm Learning Right Now
 
-- 🇪🇸 Español — Nativo  
-- 🇺🇸 English — B1 (Intermediate)
+I'm fully immersed in developing with **Next.js**. After years of solving real-world problems under pressure in the hospitality industry, in bilingual technical support, and in systems coordination, I'm now applying that “make it work” mindset to building useful SaaS tools and web applications.
 
-Experiencia real atendiendo usuarios en ambos idiomas.
+I focus on mastering the App Router, server components, performance optimization, and clean project structures with TypeScript and Supabase. I want what I build to be easy to maintain, quick to iterate on, and to truly solve people’s problems.
 
 ---
 
-## 📫 Contacto
+## ⚡ Fun Fact
 
-- GitHub: https://github.com/jseramn  
-- Email: jrgarciadr29@gmail.com 
+I went from handling cash registers and dealing with guest complaints in hotels to building web apps and SaaS tools with Next.js. It’s the same mindset of staying calm under pressure… only now the complaints come in the form of production bugs.
+
 ---
 
-> Siempre abierto a aprender, mejorar y colaborar en proyectos interesantes.
+## 💬 Ask me about
+
+Full-stack development with Next.js + modern tools, my transition from bilingual tech support and hotel operations to building digital products. How I turn real operational problems into technical solutions. Also about applied AI, music, and neuropsychology.
+
+---
+
+## 📊 GitHub Stats
+
+![](https://github-readme-stats.shion.dev/api?username=jseramn&theme=radical&hide_border=false&include_all_commits=true&count_private=true)<br/>
+![](https://streak-stats.demolab.com/?user=jseramn&theme=radical&hide_border=false)<br/>
+![](https://github-readme-stats.shion.dev/api/top-langs/?username=jseramn&theme=radical&hide_border=false&include_all_commits=true&count_private=true&layout=compact)
+
+## 🏆 GitHub Trophies
+
+![](https://github-profile-trophy.vercel.app/?username=jseramn&theme=radical&no-frame=false&no-bg=false&margin-w=4)
+
+### ✍️ Random Dev Quote
+
+![](https://quotes-github-readme.vercel.app/api?type=vertical&theme=radical)
+
+### 🔝 Top Contributed Repo
+
+![](https://github-contributor-stats.vercel.app/api?username=jseramn&limit=5&theme=radical&combine_all_yearly_contributions=true)
+
+<!-- Mejorado y personalizado para jseramn -->
