@@ -1,10 +1,10 @@
-# 👋 Hola, soy José Ramón
+# 👋 Hi, I'm José Ramón
 
-Desarrollador Full Stack enfocado en construir **aplicaciones web y herramientas útiles** con Next.js.
+Full-Stack Developer focused on building **web applications and useful tools** with Next.js.
 
-Mi camino empezó en hoteles y soporte técnico bilingüe, atendiendo gente, resolviendo problemas bajo presión y coordinando sistemas. Esa experiencia me enseñó a mantener la calma, entender necesidades reales y convertir caos operativo en soluciones claras. Hoy aplico exactamente esa misma mentalidad al desarrollo de productos digitales y pequeñas herramientas SaaS.
+My career began in the hospitality industry and bilingual technical support, where I interacted with people, solved problems under pressure, and managed systems. That experience taught me to stay calm, understand real needs, and turn operational chaos into clear solutions. Today, I apply that exact same mindset to developing digital products and small SaaS tools.
 
-Actualmente trabajo con **Next.js, TypeScript, Tailwind CSS, Node.js y Supabase**. Me gusta aprender rápido, automatizar lo que se pueda y crear cosas que realmente sirvan.
+I currently work with **Next.js, TypeScript, Tailwind CSS, Node.js, and Supabase**. I like to learn quickly, automate whatever I can, and create things that are truly useful.
 
 ---
 
