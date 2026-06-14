@@ -1,6 +1,6 @@
 # 👋 Hi, I'm José Ramón
 
-Full-Stack Developer focused on building **web applications and useful tools** with Next.js.
+A creative and geek guy focused on building **web applications and useful tools** with Next.js.
 
 My career began in the hospitality industry and bilingual technical support, where I interacted with people, solved problems under pressure, and managed systems. That experience taught me to stay calm, understand real needs, and turn operational chaos into clear solutions. Today, I apply that exact same mindset to developing digital products and small SaaS tools.
 
