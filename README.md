@@ -57,7 +57,7 @@
   <img src="https://img.shields.io/badge/Opera%20GX-161b22?style=flat-square&logo=opera&logoColor=c9d1d9" alt="Opera GX" />
   <img src="https://img.shields.io/badge/Proton%20VPN-161b22?style=flat-square&logo=protonvpn&logoColor=c9d1d9" alt="Proton VPN" />
   <img src="https://img.shields.io/badge/Bitwarden-161b22?style=flat-square&logo=bitwarden&logoColor=c9d1d9" alt="Bitwarden" />
-  <img src="https://img.shields.io/badge/RustDesk-161b22?style=flat-square" alt="RustDesk" />
+  <img src="https://img.shields.io/badge/remote%20support-AnyDesk%20·%20RustDesk-161b22?style=flat-square&labelColor=0d1117" alt="Remote support: AnyDesk and RustDesk" />
   <img src="https://img.shields.io/badge/Discord-161b22?style=flat-square&logo=discord&logoColor=c9d1d9" alt="Discord" />
   <img src="https://img.shields.io/badge/Slack-161b22?style=flat-square&logo=slack&logoColor=c9d1d9" alt="Slack" />
   <img src="https://img.shields.io/badge/Telegram-161b22?style=flat-square&logo=telegram&logoColor=c9d1d9" alt="Telegram" />
