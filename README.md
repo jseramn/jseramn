@@ -7,14 +7,43 @@
 <br />
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=ts,js,py,go,rust,html,css,bash&theme=dark" alt="Languages: TypeScript, JavaScript, Python, Go, Rust, HTML, CSS, Bash" />
+  <sub>languages</sub><br />
+  <img src="https://img.shields.io/badge/TypeScript-161b22?style=flat-square" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/JavaScript-161b22?style=flat-square" alt="JavaScript" />
+  <img src="https://img.shields.io/badge/Python-161b22?style=flat-square" alt="Python" />
+  <img src="https://img.shields.io/badge/Go-161b22?style=flat-square" alt="Go" />
+  <img src="https://img.shields.io/badge/Rust-161b22?style=flat-square" alt="Rust" />
+  <img src="https://img.shields.io/badge/HTML-161b22?style=flat-square" alt="HTML" />
+  <img src="https://img.shields.io/badge/CSS-161b22?style=flat-square" alt="CSS" />
+  <img src="https://img.shields.io/badge/Bash-161b22?style=flat-square" alt="Bash" />
 </p>
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=react,nextjs,astro,tailwind,threejs,nodejs,bun,pnpm,npm,yarn,vite,postgres,redis,docker,vercel,cloudflare,linux,git,github,vim&theme=dark" alt="Stack: React, Next.js, Astro, Tailwind, Three.js, Node.js, Bun, pnpm, npm, Yarn, Vite, Postgres, Redis, Docker, Vercel, Cloudflare, Linux, Git, GitHub, Vim" />
+  <sub>stack</sub><br />
+  <img src="https://img.shields.io/badge/React-161b22?style=flat-square" alt="React" />
+  <img src="https://img.shields.io/badge/Next.js-161b22?style=flat-square" alt="Next.js" />
+  <img src="https://img.shields.io/badge/Astro-161b22?style=flat-square" alt="Astro" />
+  <img src="https://img.shields.io/badge/Tailwind-161b22?style=flat-square" alt="Tailwind" />
+  <img src="https://img.shields.io/badge/Three.js-161b22?style=flat-square" alt="Three.js" />
+  <img src="https://img.shields.io/badge/Node.js-161b22?style=flat-square" alt="Node.js" />
+  <img src="https://img.shields.io/badge/Bun-161b22?style=flat-square" alt="Bun" />
+  <img src="https://img.shields.io/badge/pnpm-161b22?style=flat-square" alt="pnpm" />
+  <img src="https://img.shields.io/badge/npm-161b22?style=flat-square" alt="npm" />
+  <img src="https://img.shields.io/badge/Yarn-161b22?style=flat-square" alt="Yarn" />
+  <img src="https://img.shields.io/badge/Vite-161b22?style=flat-square" alt="Vite" />
+  <img src="https://img.shields.io/badge/Postgres-161b22?style=flat-square" alt="Postgres" />
+  <img src="https://img.shields.io/badge/Redis-161b22?style=flat-square" alt="Redis" />
+  <img src="https://img.shields.io/badge/Docker-161b22?style=flat-square" alt="Docker" />
+  <img src="https://img.shields.io/badge/Vercel-161b22?style=flat-square" alt="Vercel" />
+  <img src="https://img.shields.io/badge/Cloudflare-161b22?style=flat-square" alt="Cloudflare" />
+  <img src="https://img.shields.io/badge/Linux-161b22?style=flat-square" alt="Linux" />
+  <img src="https://img.shields.io/badge/Git-161b22?style=flat-square" alt="Git" />
+  <img src="https://img.shields.io/badge/GitHub-161b22?style=flat-square" alt="GitHub" />
+  <img src="https://img.shields.io/badge/Vim-161b22?style=flat-square" alt="Vim" />
 </p>
 
 <p align="center">
+  <sub>harnesses</sub><br />
   <img src="https://img.shields.io/badge/Cursor-161b22?style=flat-square" alt="Cursor" />
   <img src="https://img.shields.io/badge/Cursor%20Agent-161b22?style=flat-square" alt="Cursor Agent" />
   <img src="https://img.shields.io/badge/Claude%20Code-161b22?style=flat-square" alt="Claude Code" />
@@ -38,6 +67,7 @@
 </p>
 
 <p align="center">
+  <sub>workshop</sub><br />
   <img src="https://img.shields.io/badge/Engram-161b22?style=flat-square" alt="Engram" />
   <img src="https://img.shields.io/badge/Scryer-161b22?style=flat-square" alt="Scryer" />
   <img src="https://img.shields.io/badge/CodeGraph-161b22?style=flat-square" alt="CodeGraph" />
@@ -50,16 +80,17 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Obsidian-161b22?style=flat-square&logo=obsidian&logoColor=c9d1d9" alt="Obsidian" />
+  <sub>daily</sub><br />
+  <img src="https://img.shields.io/badge/Obsidian-161b22?style=flat-square" alt="Obsidian" />
   <img src="https://img.shields.io/badge/Kitty-161b22?style=flat-square" alt="Kitty" />
-  <img src="https://img.shields.io/badge/Brave-161b22?style=flat-square&logo=brave&logoColor=c9d1d9" alt="Brave" />
-  <img src="https://img.shields.io/badge/Chrome-161b22?style=flat-square&logo=googlechrome&logoColor=c9d1d9" alt="Chrome" />
-  <img src="https://img.shields.io/badge/Opera%20GX-161b22?style=flat-square&logo=opera&logoColor=c9d1d9" alt="Opera GX" />
-  <img src="https://img.shields.io/badge/Proton%20VPN-161b22?style=flat-square&logo=protonvpn&logoColor=c9d1d9" alt="Proton VPN" />
-  <img src="https://img.shields.io/badge/Bitwarden-161b22?style=flat-square&logo=bitwarden&logoColor=c9d1d9" alt="Bitwarden" />
-  <img src="https://img.shields.io/badge/remote%20support-AnyDesk%20·%20RustDesk-161b22?style=flat-square&labelColor=0d1117" alt="Remote support: AnyDesk and RustDesk" />
-  <img src="https://img.shields.io/badge/Discord-161b22?style=flat-square&logo=discord&logoColor=c9d1d9" alt="Discord" />
-  <img src="https://img.shields.io/badge/Slack-161b22?style=flat-square&logo=slack&logoColor=c9d1d9" alt="Slack" />
-  <img src="https://img.shields.io/badge/Telegram-161b22?style=flat-square&logo=telegram&logoColor=c9d1d9" alt="Telegram" />
+  <img src="https://img.shields.io/badge/Brave-161b22?style=flat-square" alt="Brave" />
+  <img src="https://img.shields.io/badge/Chrome-161b22?style=flat-square" alt="Chrome" />
+  <img src="https://img.shields.io/badge/Opera%20GX-161b22?style=flat-square" alt="Opera GX" />
+  <img src="https://img.shields.io/badge/Proton%20VPN-161b22?style=flat-square" alt="Proton VPN" />
+  <img src="https://img.shields.io/badge/Bitwarden-161b22?style=flat-square" alt="Bitwarden" />
+  <img src="https://img.shields.io/badge/AnyDesk%20·%20RustDesk-161b22?style=flat-square" alt="Remote support: AnyDesk and RustDesk" />
+  <img src="https://img.shields.io/badge/Discord-161b22?style=flat-square" alt="Discord" />
+  <img src="https://img.shields.io/badge/Slack-161b22?style=flat-square" alt="Slack" />
+  <img src="https://img.shields.io/badge/Telegram-161b22?style=flat-square" alt="Telegram" />
   <img src="https://img.shields.io/badge/OBS-161b22?style=flat-square" alt="OBS" />
 </p>
