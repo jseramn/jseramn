@@ -1,0 +1,28 @@
+name: Profile assets
+on:
+  push:
+    branches: [main]
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Check published assets and public paths
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          from xml.etree import ElementTree
+          import re
+          readme = Path("README.md").read_text()
+          for asset in re.findall(r'<img src="(assets/[^"]+)"', readme):
+              ElementTree.parse(asset)
+          for path in (Path("update-telemetry.bat"), Path("scripts/render_profile.py"), Path("render_token_card.py")):
+              assert not re.search(r"C:[/\\]Users[/\\]|/c/Users/", path.read_text(), re.I), path
+          print("Profile assets and paths verified")
+          PY
