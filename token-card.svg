@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="400" viewBox="0 0 1000 400" role="img" aria-label="AI token telemetry for jseramn">
+<defs>
+  <filter id="glow-blue" x="-60%" y="-60%" width="220%" height="220%">
+    <feGaussianBlur stdDeviation="5" result="b"/>
+    <feFlood flood-color="#0E76FD" flood-opacity="0.55" result="c"/>
+    <feComposite in="c" in2="b" operator="in" result="glow"/>
+    <feMerge><feMergeNode in="glow"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+  <filter id="glow-purple" x="-60%" y="-60%" width="220%" height="220%">
+    <feGaussianBlur stdDeviation="5" result="b"/>
+    <feFlood flood-color="#823CFA" flood-opacity="0.6" result="c"/>
+    <feComposite in="c" in2="b" operator="in" result="glow"/>
+    <feMerge><feMergeNode in="glow"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+  <filter id="glow-amber" x="-60%" y="-60%" width="220%" height="220%">
+    <feGaussianBlur stdDeviation="4" result="b"/>
+    <feFlood flood-color="#B67E5A" flood-opacity="0.55" result="c"/>
+    <feComposite in="c" in2="b" operator="in" result="glow"/>
+    <feMerge><feMergeNode in="glow"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+  <linearGradient id="bar-grad" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#0E76FD" stop-opacity="1"/>
+    <stop offset="1" stop-color="#0E76FD" stop-opacity="0.45"/>
+  </linearGradient>
+  <linearGradient id="card-sheen" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#823CFA" stop-opacity="0.10"/>
+    <stop offset="0.35" stop-color="#823CFA" stop-opacity="0"/>
+  </linearGradient>
+</defs>
+<rect x="0.5" y="0.5" width="999" height="399" rx="8" fill="#0D172A" stroke="#823CFA" stroke-opacity="0.45"/>
+<rect x="0.5" y="0.5" width="999" height="399" rx="8" fill="url(#card-sheen)"/>
+<text x="28" y="38" fill="#0E76FD" font-family="'Consolas','Menlo','DejaVu Sans Mono',monospace" font-size="15" font-weight="bold" filter="url(#glow-blue)">$ ai-telemetry --live</text>
+<text x="972" y="38" fill="#94A3B8" font-family="'Consolas','Menlo','DejaVu Sans Mono',monospace" font-size="11" text-anchor="end">updated 2026-11-26 18:55 UTC · refreshes every 24h</text>
+<text x="28" y="70" fill="#94A3B8" font-family="'Consolas','Menlo','DejaVu Sans Mono',monospace" font-size="11" letter-spacing="2">ALL-TIME TOKENS</text>
+<text x="28" y="108" fill="#0E76FD" font-family="'Consolas','Menlo','DejaVu Sans Mono',monospace" font-size="36" font-weight="bold" filter="url(#glow-blue)">3.23B</text>
+<text x="28" y="132" fill="#94A3B8" font-family="'Consolas','Menlo','DejaVu Sans Mono',monospace" font-size="12">$725 usd</text>
+<text x="273" y="70" fill="#94A3B8" font-family="'Consolas','Menlo','DejaVu Sans Mono',monospace" font-size="11" letter-spacing="2">THIS MONTH</text>
+<text x="273" y="108" fill="#823CFA" font-family="'Consolas','Menlo','DejaVu Sans Mono',monospace" font-size="36" font-weight="bold" filter="url(#glow-purple)">3.17B</text>
+<text x="273" y="132" fill="#94A3B8" font-family="'Consolas','Menlo','DejaVu Sans Mono',monospace" font-size="12">$719 usd</text>
+<text x="518" y="70" fill="#94A3B8" font-family="'Consolas','Menlo','DejaVu Sans Mono',monospace" font-size="11" letter-spacing="2">TODAY</text>
+<text x="518" y="108" fill="#B67E5A" font-family="'Consolas','Menlo','DejaVu Sans Mono',monospace" font-size="36" font-weight="bold" filter="url(#glow-amber)">522.7M</text>
+<text x="518" y="132" fill="#94A3B8" font-family="'Consolas','Menlo','DejaVu Sans Mono',monospace" font-size="12">$86.15 usd</text>
+<text x="763" y="70" fill="#94A3B8" font-family="'Consolas','Menlo','DejaVu Sans Mono',monospace" font-size="11" letter-spacing="2">AGENTS ORCHESTRATED</text>
+<text x="763" y="108" fill="#E0E6ED" font-family="'Consolas','Menlo','DejaVu Sans Mono',monospace" font-size="36" font-weight="bold">9</text>
+<text x="763" y="132" fill="#94A3B8" font-family="'Consolas','Menlo','DejaVu Sans Mono',monospace" font-size="12">this month</text>
+<line x1="28" y1="158" x2="972" y2="158" stroke="#E0E6ED" stroke-opacity="0.12" stroke-width="1"/>
+<text x="28" y="238" fill="#94A3B8" font-family="'Consolas','Menlo','DejaVu Sans Mono',monospace" font-size="11" letter-spacing="2">DAILY TOKENS — LAST 24 ACTIVE DAYS</text>
+<rect x="28.0" y="348.0" width="19.5" height="2.0" rx="1.5" fill="url(#bar-grad)"/>
+<rect x="51.5" y="347.0" width="19.5" height="3.0" rx="1.5" fill="url(#bar-grad)"/>
+<rect x="75.0" y="348.0" width="19.5" height="2.0" rx="1.5" fill="url(#bar-grad)"/>
+<rect x="98.5" y="348.0" width="19.5" height="2.0" rx="1.5" fill="url(#bar-grad)"/>
+<rect x="122.0" y="344.9" width="19.5" height="5.1" rx="1.5" fill="url(#bar-grad)"/>
+<rect x="145.5" y="348.0" width="19.5" height="2.0" rx="1.5" fill="url(#bar-grad)"/>
+<rect x="169.0" y="348.0" width="19.5" height="2.0" rx="1.5" fill="url(#bar-grad)"/>
+<rect x="192.5" y="348.0" width="19.5" height="2.0" rx="1.5" fill="url(#bar-grad)"/>
+<rect x="216.0" y="341.6" width="19.5" height="8.4" rx="1.5" fill="url(#bar-grad)"/>
+<rect x="239.5" y="347.4" width="19.5" height="2.6" rx="1.5" fill="url(#bar-grad)"/>
+<rect x="263.0" y="344.2" width="19.5" height="5.8" rx="1.5" fill="url(#bar-grad)"/>
+<rect x="286.5" y="344.9" width="19.5" height="5.1" rx="1.5" fill="url(#bar-grad)"/>
+<rect x="310.0" y="348.0" width="19.5" height="2.0" rx="1.5" fill="url(#bar-grad)"/>
+<rect x="333.5" y="347.8" width="19.5" height="2.2" rx="1.5" fill="url(#bar-grad)"/>
+<rect x="357.0" y="347.0" width="19.5" height="3.0" rx="1.5" fill="url(#bar-grad)"/>
+<rect x="380.5" y="336.4" width="19.5" height="13.6" rx="1.5" fill="url(#bar-grad)"/>
+<rect x="404.0" y="290.5" width="19.5" height="59.5" rx="1.5" fill="url(#bar-grad)"/>
+<rect x="427.5" y="275.9" width="19.5" height="74.1" rx="1.5" fill="url(#bar-grad)"/>
+<rect x="451.0" y="332.4" width="19.5" height="17.6" rx="1.5" fill="url(#bar-grad)"/>
+<rect x="474.5" y="322.5" width="19.5" height="27.5" rx="1.5" fill="url(#bar-grad)"/>
+<rect x="498.0" y="250.0" width="19.5" height="100.0" rx="1.5" fill="url(#bar-grad)"/>
+<rect x="521.5" y="330.5" width="19.5" height="19.5" rx="1.5" fill="url(#bar-grad)"/>
+<rect x="545.0" y="293.9" width="19.5" height="56.1" rx="1.5" fill="url(#bar-grad)"/>
+<rect x="568.5" y="271.9" width="19.5" height="78.1" rx="1.5" fill="#B67E5A" filter="url(#glow-amber)"/>
+<line x1="28" y1="350" x2="588" y2="350" stroke="#E0E6ED" stroke-opacity="0.12" stroke-width="1"/>
+<text x="28" y="368" fill="#94A3B8" font-family="'Consolas','Menlo','DejaVu Sans Mono',monospace" font-size="10">09-18</text>
+<text x="588" y="368" fill="#94A3B8" font-family="'Consolas','Menlo','DejaVu Sans Mono',monospace" font-size="10" text-anchor="end">11-26 · peak 665.3M</text>
+<text x="640" y="238" fill="#94A3B8" font-family="'Consolas','Menlo','DejaVu Sans Mono',monospace" font-size="11" letter-spacing="2">THIS MONTH BY AGENT (log)</text>
+<text x="640" y="269" fill="#E0E6ED" font-family="'Consolas','Menlo','DejaVu Sans Mono',monospace" font-size="11">devin</text>
+<rect x="740" y="258" width="130.0" height="13" rx="2" fill="#823CFA" opacity="0.9" filter="url(#glow-purple)"/>
+<text x="962" y="269" fill="#94A3B8" font-family="'Consolas','Menlo','DejaVu Sans Mono',monospace" font-size="10" text-anchor="end">2.68B</text>
+<text x="640" y="290" fill="#E0E6ED" font-family="'Consolas','Menlo','DejaVu Sans Mono',monospace" font-size="11">antigravity</text>
+<rect x="740" y="279" width="115.8" height="13" rx="2" fill="#0E76FD" opacity="0.9"/>
+<text x="962" y="290" fill="#94A3B8" font-family="'Consolas','Menlo','DejaVu Sans Mono',monospace" font-size="10" text-anchor="end">249.7M</text>
+<text x="640" y="311" fill="#E0E6ED" font-family="'Consolas','Menlo','DejaVu Sans Mono',monospace" font-size="11">codex</text>
+<rect x="740" y="300" width="111.7" height="13" rx="2" fill="#0E76FD" opacity="0.9"/>
+<text x="962" y="311" fill="#94A3B8" font-family="'Consolas','Menlo','DejaVu Sans Mono',monospace" font-size="10" text-anchor="end">126.4M</text>
+<text x="640" y="332" fill="#E0E6ED" font-family="'Consolas','Menlo','DejaVu Sans Mono',monospace" font-size="11">hermes</text>
+<rect x="740" y="321" width="107.5" height="13" rx="2" fill="#0E76FD" opacity="0.9"/>
+<text x="962" y="332" fill="#94A3B8" font-family="'Consolas','Menlo','DejaVu Sans Mono',monospace" font-size="10" text-anchor="end">62.4M</text>
+<text x="640" y="353" fill="#E0E6ED" font-family="'Consolas','Menlo','DejaVu Sans Mono',monospace" font-size="11">junie</text>
+<rect x="740" y="342" width="104.6" height="13" rx="2" fill="#0E76FD" opacity="0.9"/>
+<text x="962" y="353" fill="#94A3B8" font-family="'Consolas','Menlo','DejaVu Sans Mono',monospace" font-size="10" text-anchor="end">38.6M</text>
+<text x="640" y="374" fill="#E0E6ED" font-family="'Consolas','Menlo','DejaVu Sans Mono',monospace" font-size="11">claude</text>
+<rect x="740" y="363" width="83.7" height="13" rx="2" fill="#0E76FD" opacity="0.9"/>
+<text x="962" y="374" fill="#94A3B8" font-family="'Consolas','Menlo','DejaVu Sans Mono',monospace" font-size="10" text-anchor="end">1.2M</text>
+<text x="28" y="382" fill="#94A3B8" font-family="'Consolas','Menlo','DejaVu Sans Mono',monospace" font-size="10">tokens measured across local agent sessions · source: private token monitor</text>
+</svg>

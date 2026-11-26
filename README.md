@@ -14,9 +14,7 @@ contributing in public: <a href="https://github.com/Get-Concord-AI/concord-mcp">
 <p align="left"><b>$ ai-telemetry</b> — tokens burned orchestrating agents, refreshed every 24h</p>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="token-card-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="token-card-light.svg" />
-  <img alt="AI token telemetry — tokens per day, per agent, all-time" src="token-card-dark.svg" width="100%" />
+  <img alt="AI token telemetry — tokens per day, per agent, all-time" src="token-card.svg" width="100%" />
 </picture>
 
 <p align="left"><b>languages</b></p>
@@ -124,6 +122,6 @@ contributing in public: <a href="https://github.com/Get-Concord-AI/concord-mcp">
 <br />
 
 <p align="left">
-  <img src="https://komarev.com/ghpvc/?username=jseramn&style=for-the-badge&color=3fb950&label=profile+views" alt="profile views" />
+  <img src="https://komarev.com/ghpvc/?username=jseramn&style=for-the-badge&color=823CFA&label=profile+views" alt="profile views" />
 </p>
 
