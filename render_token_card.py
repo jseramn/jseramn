@@ -164,14 +164,8 @@ def render(data, theme_key):
 
     # ---- ROW 1: portrait / neofetch / whoami  (y 64..244)
     r1y, r1h = 64, 180
-    # portrait block 176x176 + brackets
-    px, py, pw = 28, r1y, 176
-    out.append(f'<rect x="{px}" y="{py}" width="{pw}" height="{pw}" fill="{t["bg_surface"]}" stroke="{t["border_technical"]}" stroke-width="1"/>')
-    out.append(halftone_circles(px + 8, py + 8, pw - 16, pw - 16, t))
-    out.append(brackets(px - 4, py - 4, pw + 8, pw + 8, ARCH["bracketSizeLarge"], ARCH["bracketThicknessLarge"], t["accent_alert"]))
-
-    # neofetch panel
-    nx, nw = px + pw + 24, 400
+    # neofetch panel (sin retrato: el avatar de github ya cumple ese rol)
+    nx, nw = 28, 500
     out.append(f'<rect x="{nx}" y="{r1y}" width="{nw}" height="{r1h}" fill="{t["bg_surface"]}"/>')
     out.append(f'<rect x="{nx}" y="{r1y}" width="{nw}" height="{r1h}" fill="url(#grid)"/>')
     out.append(f'<rect x="{nx}" y="{r1y}" width="{nw}" height="{r1h}" fill="none" stroke="{t["border_technical"]}" stroke-width="1"/>')
