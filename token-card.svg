@@ -30,16 +30,16 @@
 <rect x="0.5" y="0.5" width="999" height="399" rx="8" fill="#0D172A" stroke="#823CFA" stroke-opacity="0.45"/>
 <rect x="0.5" y="0.5" width="999" height="399" rx="8" fill="url(#card-sheen)"/>
 <text x="28" y="38" fill="#0E76FD" font-family="'Consolas','Menlo','DejaVu Sans Mono',monospace" font-size="15" font-weight="bold" filter="url(#glow-blue)">$ ai-telemetry --live</text>
-<text x="972" y="38" fill="#94A3B8" font-family="'Consolas','Menlo','DejaVu Sans Mono',monospace" font-size="11" text-anchor="end">updated 2026-11-26 18:55 UTC · refreshes every 24h</text>
+<text x="972" y="38" fill="#94A3B8" font-family="'Consolas','Menlo','DejaVu Sans Mono',monospace" font-size="11" text-anchor="end">updated 2026-11-26 19:01 UTC · refreshes every 24h</text>
 <text x="28" y="70" fill="#94A3B8" font-family="'Consolas','Menlo','DejaVu Sans Mono',monospace" font-size="11" letter-spacing="2">ALL-TIME TOKENS</text>
 <text x="28" y="108" fill="#0E76FD" font-family="'Consolas','Menlo','DejaVu Sans Mono',monospace" font-size="36" font-weight="bold" filter="url(#glow-blue)">3.23B</text>
-<text x="28" y="132" fill="#94A3B8" font-family="'Consolas','Menlo','DejaVu Sans Mono',monospace" font-size="12">$725 usd</text>
+<text x="28" y="132" fill="#94A3B8" font-family="'Consolas','Menlo','DejaVu Sans Mono',monospace" font-size="12">$724 usd</text>
 <text x="273" y="70" fill="#94A3B8" font-family="'Consolas','Menlo','DejaVu Sans Mono',monospace" font-size="11" letter-spacing="2">THIS MONTH</text>
 <text x="273" y="108" fill="#823CFA" font-family="'Consolas','Menlo','DejaVu Sans Mono',monospace" font-size="36" font-weight="bold" filter="url(#glow-purple)">3.17B</text>
 <text x="273" y="132" fill="#94A3B8" font-family="'Consolas','Menlo','DejaVu Sans Mono',monospace" font-size="12">$719 usd</text>
 <text x="518" y="70" fill="#94A3B8" font-family="'Consolas','Menlo','DejaVu Sans Mono',monospace" font-size="11" letter-spacing="2">TODAY</text>
-<text x="518" y="108" fill="#B67E5A" font-family="'Consolas','Menlo','DejaVu Sans Mono',monospace" font-size="36" font-weight="bold" filter="url(#glow-amber)">522.7M</text>
-<text x="518" y="132" fill="#94A3B8" font-family="'Consolas','Menlo','DejaVu Sans Mono',monospace" font-size="12">$86.15 usd</text>
+<text x="518" y="108" fill="#B67E5A" font-family="'Consolas','Menlo','DejaVu Sans Mono',monospace" font-size="36" font-weight="bold" filter="url(#glow-amber)">525.9M</text>
+<text x="518" y="132" fill="#94A3B8" font-family="'Consolas','Menlo','DejaVu Sans Mono',monospace" font-size="12">$86.62 usd</text>
 <text x="763" y="70" fill="#94A3B8" font-family="'Consolas','Menlo','DejaVu Sans Mono',monospace" font-size="11" letter-spacing="2">AGENTS ORCHESTRATED</text>
 <text x="763" y="108" fill="#E0E6ED" font-family="'Consolas','Menlo','DejaVu Sans Mono',monospace" font-size="36" font-weight="bold">9</text>
 <text x="763" y="132" fill="#94A3B8" font-family="'Consolas','Menlo','DejaVu Sans Mono',monospace" font-size="12">this month</text>
@@ -68,14 +68,14 @@
 <rect x="498.0" y="250.0" width="19.5" height="100.0" rx="1.5" fill="url(#bar-grad)"/>
 <rect x="521.5" y="330.5" width="19.5" height="19.5" rx="1.5" fill="url(#bar-grad)"/>
 <rect x="545.0" y="293.9" width="19.5" height="56.1" rx="1.5" fill="url(#bar-grad)"/>
-<rect x="568.5" y="271.9" width="19.5" height="78.1" rx="1.5" fill="#B67E5A" filter="url(#glow-amber)"/>
+<rect x="568.5" y="270.9" width="19.5" height="79.1" rx="1.5" fill="#B67E5A" filter="url(#glow-amber)"/>
 <line x1="28" y1="350" x2="588" y2="350" stroke="#E0E6ED" stroke-opacity="0.12" stroke-width="1"/>
 <text x="28" y="368" fill="#94A3B8" font-family="'Consolas','Menlo','DejaVu Sans Mono',monospace" font-size="10">09-18</text>
 <text x="588" y="368" fill="#94A3B8" font-family="'Consolas','Menlo','DejaVu Sans Mono',monospace" font-size="10" text-anchor="end">11-26 · peak 665.3M</text>
 <text x="640" y="238" fill="#94A3B8" font-family="'Consolas','Menlo','DejaVu Sans Mono',monospace" font-size="11" letter-spacing="2">THIS MONTH BY AGENT (log)</text>
 <text x="640" y="269" fill="#E0E6ED" font-family="'Consolas','Menlo','DejaVu Sans Mono',monospace" font-size="11">devin</text>
 <rect x="740" y="258" width="130.0" height="13" rx="2" fill="#823CFA" opacity="0.9" filter="url(#glow-purple)"/>
-<text x="962" y="269" fill="#94A3B8" font-family="'Consolas','Menlo','DejaVu Sans Mono',monospace" font-size="10" text-anchor="end">2.68B</text>
+<text x="962" y="269" fill="#94A3B8" font-family="'Consolas','Menlo','DejaVu Sans Mono',monospace" font-size="10" text-anchor="end">2.69B</text>
 <text x="640" y="290" fill="#E0E6ED" font-family="'Consolas','Menlo','DejaVu Sans Mono',monospace" font-size="11">antigravity</text>
 <rect x="740" y="279" width="115.8" height="13" rx="2" fill="#0E76FD" opacity="0.9"/>
 <text x="962" y="290" fill="#94A3B8" font-family="'Consolas','Menlo','DejaVu Sans Mono',monospace" font-size="10" text-anchor="end">249.7M</text>
