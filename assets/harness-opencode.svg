@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="268" height="56" viewBox="0 0 268 56" role="img" aria-label="OpenCode: 248,289 tokens">
+  <defs>
+    <linearGradient id="edge"><stop stop-color="#0e76fd"/><stop offset="1" stop-color="#823cfa"/></linearGradient>
+    <pattern id="grain" width="7" height="7" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r=".55" fill="#b7aeff" opacity=".22"/></pattern>
+  </defs>
+  <rect width="268" height="56" fill="#0e1118"/>
+  <path d="M190 56L246 0h22v56z" fill="#1b172c"/>
+  <rect width="268" height="56" fill="url(#grain)"/>
+  <rect x=".5" y=".5" width="267" height="55" stroke="#44415d" fill="none"/>
+  <svg x="13" y="14" width="28" height="28" viewBox="0 0 240 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_1401_86283)">
+<mask id="mask0_1401_86283" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="240" height="300">
+<path d="M240 0H0V300H240V0Z" fill="white"/>
+</mask>
+<g mask="url(#mask0_1401_86283)">
+<path d="M180 240H60V120H180V240Z" fill="#4B4B4B"/>
+<path d="M180 60H60V240H180V60ZM240 300H0V0H240V300Z" fill="#EEEEEE"/>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_1401_86283">
+<rect width="240" height="300" fill="white"/>
+</clipPath>
+</defs>
+</svg>
+
+  <g font-family="Consolas,monospace" font-weight="bold">
+    <text x="255" y="34" text-anchor="end" font-size="18" fill="#cfc6ff">248.3K</text>
+  </g>
+  <text x="53" y="33" font-family="Segoe UI,Arial,sans-serif" font-size="15" font-weight="600" fill="#eef3fb">OpenCode</text>
+  <rect y="53" width="268" height="3" fill="url(#edge)"/>
+</svg>

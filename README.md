@@ -1,25 +1,50 @@
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="dark_mode.svg?v=card" />
-  <source media="(prefers-color-scheme: light)" srcset="light_mode.svg?v=card" />
-  <img alt="jseramn's GitHub profile" src="dark_mode.svg?v=card" width="100%" />
-</picture>
-<br />
+<h1>I build tools for coding harnesses.</h1>
+<p>Most of my client work and product development happens in private. In public, I contribute to <a href="https://github.com/Get-Concord-AI/concord-mcp">Concord MCP</a>, to help developers coordinate work across coding harnesses.</p>
 
-<p align="left">
-<b>$ whoami</b><br />
-building agentic systems — mostly in private (client systems + products in the lab)<br />
-contributing in public: <a href="https://github.com/Get-Concord-AI/concord-mcp">concord-mcp</a> — live messaging infrastructure for coding agents
+<h2>Open source contributions</h2>
+<p><strong>Concord MCP</strong> · Selected merged pull requests</p>
+<ul>
+<li><a href="https://github.com/Get-Concord-AI/concord-mcp/pull/412"><strong>Keep custom settings on reinstall</strong></a> · <code>#412</code><br />The Concord installer now preserves timeouts, disabled flags and other client settings.</li>
+<li><a href="https://github.com/Get-Concord-AI/concord-mcp/pull/404"><strong>Connect coding harnesses across worktrees</strong></a> · <code>#404</code><br />I documented how Claude Code, Codex and OpenCode share a Concord workspace in T3 Code.</li>
+</ul>
+<p><a href="https://github.com/Get-Concord-AI/concord-mcp/pulls?q=is%3Apr+author%3Ajseramn">See all my Concord pull requests →</a></p>
+
+<h2>Harnesses in my workflow</h2>
+<p><strong>9 active harnesses</strong> · Monthly tokens · November 2026</p>
+<p>
+<img src="assets/harness-devin.svg" width="268" height="56" alt="Devin: 2,755,002,809 tokens" />
+<img src="assets/harness-antigravity.svg" width="268" height="56" alt="Antigravity: 285,054,490 tokens" />
+<img src="assets/harness-codex.svg" width="268" height="56" alt="Codex: 153,473,191 tokens" />
+<img src="assets/harness-hermes.svg" width="268" height="56" alt="Hermes: 62,400,435 tokens" />
+<img src="assets/harness-junie.svg" width="268" height="56" alt="Junie: 38,633,420 tokens" />
+<img src="assets/harness-claude.svg" width="268" height="56" alt="Claude Code: 1,171,973 tokens" />
+<img src="assets/harness-grok.svg" width="268" height="56" alt="Grok Build: 500,626 tokens" />
+<img src="assets/harness-kilo.svg" width="268" height="56" alt="Kilo: 413,075 tokens" />
+<img src="assets/harness-opencode.svg" width="268" height="56" alt="OpenCode: 248,289 tokens" />
 </p>
+<p>Usage data from <a href="https://github.com/Javis603/token-monitor">Token Monitor</a> · 26 Nov 2026, 21:24 UTC</p>
+<p>
+<img src="assets/daily-tokens.svg" width="382" alt="Daily tokens. Peak on 23 Nov: 665,312,738 tokens." />
+<img src="assets/weekly-tokens.svg" width="382" alt="Weekly tokens. Peak on 23 Nov: 1,824,474,656 tokens." />
+<img src="assets/monthly-tokens.svg" width="382" alt="Monthly tokens. Peak on 01 Nov: 3,296,898,308 tokens." />
+</p>
+<details>
+<summary>Show estimated costs · daily, weekly and monthly</summary>
+<p><img src="assets/daily-cost.svg" width="382" alt="Estimated daily cost. Peak on 23 Nov: USD 202.69." />
+<img src="assets/weekly-cost.svg" width="382" alt="Estimated weekly cost. Peak on 23 Nov: USD 460.44." />
+<img src="assets/monthly-cost.svg" width="382" alt="Estimated monthly cost. Peak on 01 Nov: USD 755.98." /></p>
+</details>
+<details>
+<summary>Activity calendar and token totals</summary>
+<p><img src="assets/activity.svg" width="382" alt="Activity by day. 24 days with records. Outlined cells have no record." /></p>
+<p>658.3M today · 3.3B this month · 3.36B all time</p>
+</details>
 
-<p align="left"><b>$ ai-telemetry</b> — tokens burned orchestrating agents, refreshed every 24h</p>
-
-<picture>
-  <img alt="AI token telemetry — tokens per day, per agent, all-time" src="token-card.svg?v=badge-design" width="100%" />
-</picture>
-
-<p align="left"><b>languages</b></p>
-
-<p align="left">
+<h2>Toolbox</h2>
+<details>
+<summary>Explore my languages, stack and tools</summary>
+<p><strong>Languages</strong></p>
+<p>
   <a href="https://www.typescriptlang.org"><img src="https://raw.githubusercontent.com/jseramn/jseramn-badges/main/dist/svg/typescript.svg?v=2" height="40" alt="TypeScript" /></a>
   <a href="https://developer.mozilla.org/docs/Web/JavaScript"><img src="https://raw.githubusercontent.com/jseramn/jseramn-badges/main/dist/svg/javascript.svg?v=2" height="40" alt="JavaScript" /></a>
   <a href="https://www.python.org"><img src="https://raw.githubusercontent.com/jseramn/jseramn-badges/main/dist/svg/python.svg?v=2" height="40" alt="Python" /></a>
@@ -29,12 +54,8 @@ contributing in public: <a href="https://github.com/Get-Concord-AI/concord-mcp">
   <a href="https://developer.mozilla.org/docs/Web/CSS"><img src="https://raw.githubusercontent.com/jseramn/jseramn-badges/main/dist/svg/css.svg?v=2" height="40" alt="CSS" /></a>
   <a href="https://www.gnu.org/software/bash"><img src="https://raw.githubusercontent.com/jseramn/jseramn-badges/main/dist/svg/bash.svg?v=2" height="40" alt="Bash" /></a>
 </p>
-
-<br />
-
-<p align="left"><b>stack</b></p>
-
-<p align="left">
+<p><strong>Stack</strong></p>
+<p>
   <a href="https://react.dev"><img src="https://raw.githubusercontent.com/jseramn/jseramn-badges/main/dist/svg/react.svg?v=2" height="40" alt="React" /></a>
   <a href="https://nextjs.org"><img src="https://raw.githubusercontent.com/jseramn/jseramn-badges/main/dist/svg/next-js.svg?v=2" height="40" alt="Next.js" /></a>
   <a href="https://astro.build"><img src="https://raw.githubusercontent.com/jseramn/jseramn-badges/main/dist/svg/astro.svg?v=2" height="40" alt="Astro" /></a>
@@ -56,12 +77,8 @@ contributing in public: <a href="https://github.com/Get-Concord-AI/concord-mcp">
   <a href="https://github.com/jseramn"><img src="https://raw.githubusercontent.com/jseramn/jseramn-badges/main/dist/svg/github.svg?v=2" height="40" alt="GitHub" /></a>
   <a href="https://www.vim.org"><img src="https://raw.githubusercontent.com/jseramn/jseramn-badges/main/dist/svg/vim.svg?v=2" height="40" alt="Vim" /></a>
 </p>
-
-<br />
-
-<p align="left"><b>harnesses</b></p>
-
-<p align="left">
+<p><strong>Harnesses</strong></p>
+<p>
   <a href="https://cursor.com"><img src="https://raw.githubusercontent.com/jseramn/jseramn-badges/main/dist/svg/cursor.svg?v=2" height="40" alt="Cursor" /></a>
   <a href="https://cursor.com"><img src="https://raw.githubusercontent.com/jseramn/jseramn-badges/main/dist/svg/cursor-agent.svg?v=2" height="40" alt="Cursor Agent" /></a>
   <a href="https://code.claude.com"><img src="https://raw.githubusercontent.com/jseramn/jseramn-badges/main/dist/svg/claude-code.svg?v=2" height="40" alt="Claude Code" /></a>
@@ -83,12 +100,8 @@ contributing in public: <a href="https://github.com/Get-Concord-AI/concord-mcp">
   <a href="https://github.com/666ghj/MiroFish"><img src="https://raw.githubusercontent.com/jseramn/jseramn-badges/main/dist/svg/mirofish.svg?v=2" height="40" alt="MiroFish" /></a>
   <a href="https://www.langchain.com/dcode"><img src="https://raw.githubusercontent.com/jseramn/jseramn-badges/main/dist/svg/dcode.svg?v=2" height="40" alt="dcode" /></a>
 </p>
-
-<br />
-
-<p align="left"><b>workshop</b></p>
-
-<p align="left">
+<p><strong>Workshop</strong></p>
+<p>
   <a href="https://github.com/Gentleman-Programming/engram"><img src="https://raw.githubusercontent.com/jseramn/jseramn-badges/main/dist/svg/engram.svg?v=2" height="40" alt="Engram" /></a>
   <a href="https://github.com/jseramn/scryer"><img src="https://raw.githubusercontent.com/jseramn/jseramn-badges/main/dist/svg/scryer.svg?v=2" height="40" alt="Scryer" /></a>
   <a href="https://github.com/colbymchenry/codegraph"><img src="https://raw.githubusercontent.com/jseramn/jseramn-badges/main/dist/svg/codegraph.svg?v=2" height="40" alt="CodeGraph" /></a>
@@ -99,12 +112,8 @@ contributing in public: <a href="https://github.com/Get-Concord-AI/concord-mcp">
   <a href="https://www.doppler.com"><img src="https://raw.githubusercontent.com/jseramn/jseramn-badges/main/dist/svg/doppler.svg?v=2" height="40" alt="Doppler" /></a>
   <a href="https://github.com/Genymobile/scrcpy"><img src="https://raw.githubusercontent.com/jseramn/jseramn-badges/main/dist/svg/scrcpy.svg?v=2" height="40" alt="scrcpy" /></a>
 </p>
-
-<br />
-
-<p align="left"><b>daily</b></p>
-
-<p align="left">
+<p><strong>Daily</strong></p>
+<p>
   <a href="https://obsidian.md"><img src="https://raw.githubusercontent.com/jseramn/jseramn-badges/main/dist/svg/obsidian.svg?v=2" height="40" alt="Obsidian" /></a>
   <a href="https://sw.kovidgoyal.net/kitty"><img src="https://raw.githubusercontent.com/jseramn/jseramn-badges/main/dist/svg/kitty.svg?v=2" height="40" alt="Kitty" /></a>
   <a href="https://brave.com"><img src="https://raw.githubusercontent.com/jseramn/jseramn-badges/main/dist/svg/brave.svg?v=2" height="40" alt="Brave" /></a>
@@ -118,10 +127,4 @@ contributing in public: <a href="https://github.com/Get-Concord-AI/concord-mcp">
   <a href="https://telegram.org"><img src="https://raw.githubusercontent.com/jseramn/jseramn-badges/main/dist/svg/telegram.svg?v=2" height="40" alt="Telegram" /></a>
   <a href="https://obsproject.com"><img src="https://raw.githubusercontent.com/jseramn/jseramn-badges/main/dist/svg/obs.svg?v=2" height="40" alt="OBS" /></a>
 </p>
-
-<br />
-
-<p align="left">
-  <img src="https://komarev.com/ghpvc/?username=jseramn&style=for-the-badge&color=823CFA&label=profile+views" alt="profile views" />
-</p>
-
+</details>

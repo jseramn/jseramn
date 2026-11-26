@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="268" height="56" viewBox="0 0 268 56" role="img" aria-label="Junie: 38,633,420 tokens">
+  <defs>
+    <linearGradient id="edge"><stop stop-color="#0e76fd"/><stop offset="1" stop-color="#823cfa"/></linearGradient>
+    <pattern id="grain" width="7" height="7" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r=".55" fill="#b7aeff" opacity=".22"/></pattern>
+  </defs>
+  <rect width="268" height="56" fill="#0e1118"/>
+  <path d="M190 56L246 0h22v56z" fill="#1b172c"/>
+  <rect width="268" height="56" fill="url(#grain)"/>
+  <rect x=".5" y=".5" width="267" height="55" stroke="#44415d" fill="none"/>
+  <image x="11" y="12" width="32" height="32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAACI0lEQVR4nO3b3VHCUBCG4Q1DIdBJuDsFpB+knxTAnbES6CTOEdGMJBiR8C3Z97lwhnEcYN+Tk/CjGQDIFOZAOlat4n73q1r+/BfqBxAdAcQIIEYAMQKIEUCMAGIEECOAGAHECCBGADECiBFAjABiBBAjgBgBxAggRgAxAogRQIwAYgQQI4AYAcQIIEYAMQKIFZG/pZwcPF+OADECiBFAjABiBBAjgFjYAOlQleZA2ABeEECMAI/XdG9EDlCaA5EDuBA3QGFbyf229ta9GTeAEyEDJCevAcIGMCcn4LgBCtH+fxL7MjQdqhfl/e/XdewApl39F0IFSOLV/3P7CRfA1Kv/x2uAUAHSsXo1hxaBtp5S/ThCbkEpD1+99QxcAWVLm/+2U5oPF8OfbYCU32oozNee33MCnl2AdBr81tGqn/8RkHwP/er+/xQBUt87l98nVddD/9LabuhXy8jfUvZg9pehHuzX9eBbIAQQbj8ZAYSrPyOAcPVnBJhW76VnFwGm0tpu6Nq/iwBiBJhu9Y/69I0AExg7/IwAgiufLgKItp4zAtzRX4efEeBeWtvc8mcEeOA1fx8CCPb9LgIIh58RQDj8jADC4T/FZ8LONP854fYhwHjNflXfdKl5DVvQGHnVTzD8jCNAsOq7OAKG9/rN1MPPOAImPsn+hgD2+KETwD4/LBcOPuIR0Jw/LFEPPUKA5uOnw4E/c4Dmyj89NN4HDQDmzzvi25gXT83qjQAAAABJRU5ErkJggg=="/>
+  <g font-family="Consolas,monospace" font-weight="bold">
+    <text x="255" y="34" text-anchor="end" font-size="18" fill="#cfc6ff">38.6M</text>
+  </g>
+  <text x="53" y="33" font-family="Segoe UI,Arial,sans-serif" font-size="15" font-weight="600" fill="#eef3fb">Junie</text>
+  <rect y="53" width="268" height="3" fill="url(#edge)"/>
+</svg>

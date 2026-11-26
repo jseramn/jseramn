@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="268" height="56" viewBox="0 0 268 56" role="img" aria-label="Kilo: 413,075 tokens">
+  <defs>
+    <linearGradient id="edge"><stop stop-color="#0e76fd"/><stop offset="1" stop-color="#823cfa"/></linearGradient>
+    <pattern id="grain" width="7" height="7" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r=".55" fill="#b7aeff" opacity=".22"/></pattern>
+  </defs>
+  <rect width="268" height="56" fill="#0e1118"/>
+  <path d="M190 56L246 0h22v56z" fill="#1b172c"/>
+  <rect width="268" height="56" fill="url(#grain)"/>
+  <rect x=".5" y=".5" width="267" height="55" stroke="#44415d" fill="none"/>
+  <svg x="13" y="14" width="28" height="28" id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 32 32">
+  <rect width="32" height="32" fill="#FFDD00"/>
+  <g fill="#000000">
+    <path d="M23,26v-2h3v-5l-2-2h-4v2h-3v5l2,2h4ZM20,20h3v3h-3v-3Z"/>
+    <rect x="12" y="17" width="3" height="3"/>
+    <polygon points="26 12 23 12 23 9 20 6 17 6 17 9 20 9 20 12 17 12 17 15 26 15 26 12"/>
+    <path d="M0,0v32h32V0H0ZM29,29H3V3h26v26Z"/>
+    <polygon points="15 26 15 23 9 23 9 17 6 17 6 23.1875 8.8125 26 15 26"/>
+    <rect x="12" y="6" width="3" height="3"/>
+    <polygon points="9 12 12 12 12 15 15 15 15 12 12 9 9 9 9 6 6 6 6 15 9 15 9 12"/>
+  </g>
+</svg>
+
+  <g font-family="Consolas,monospace" font-weight="bold">
+    <text x="255" y="34" text-anchor="end" font-size="18" fill="#cfc6ff">413.1K</text>
+  </g>
+  <text x="53" y="33" font-family="Segoe UI,Arial,sans-serif" font-size="15" font-weight="600" fill="#eef3fb">Kilo</text>
+  <rect y="53" width="268" height="3" fill="url(#edge)"/>
+</svg>
