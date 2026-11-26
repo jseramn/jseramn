@@ -91,34 +91,6 @@ def brackets(x, y, w, h, size, thick, color):
     return "".join(c)
 
 
-def halftone_circles(box_x, box_y, box_w, box_h, theme, cell=4):
-    """Pure-SVG halftone of the avatar: dot radius ~ luminance, duotone accent mapping."""
-    try:
-        from PIL import Image
-    except ImportError:
-        return ""
-    if not os.path.exists(AVATAR_PATH):
-        return ""
-    img = Image.open(AVATAR_PATH).convert("L")
-    cols, rows = box_w // cell, box_h // cell
-    img = img.resize((cols, rows))
-    px = img.load()
-    sec, pri = theme["accent_secondary"], theme["accent_primary"]
-    out = []
-    for ry in range(rows):
-        for cx in range(cols):
-            lum = px[cx, ry] / 255.0
-            r = (cell / 2 - 0.25) * (lum ** 0.85)
-            if r < 0.35:
-                continue
-            color = hexmix(sec, pri, lum)
-            out.append(
-                f'<circle cx="{box_x + cx*cell + cell/2:.1f}" cy="{box_y + ry*cell + cell/2:.1f}" '
-                f'r="{r:.2f}" fill="{color}"/>'
-            )
-    return "".join(out)
-
-
 def render(data, theme_key):
     t = THEMES[theme_key]
     snap = data["snapshot"]
