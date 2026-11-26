@@ -10,7 +10,7 @@ import json
 import os.path
 from datetime import datetime
 
-EXPORT_PATH = r"${USERPROFILE}/usage-registry/token-monitor-export.json"
+EXPORT_PATH = os.environ.get("TOKEN_MONITOR_EXPORT", os.path.join(os.path.expanduser("~"), "usage-registry", "token-monitor-export.json"))
 
 W, H = 1000, 400
 

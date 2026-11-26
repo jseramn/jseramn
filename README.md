@@ -13,8 +13,8 @@
 <p><strong>9 active harnesses</strong> · Monthly tokens · November 2026</p>
 <p>
 <img src="assets/harness-devin.svg" width="268" height="56" alt="Devin: 2,755,002,809 tokens" />
-<img src="assets/harness-antigravity.svg" width="268" height="56" alt="Antigravity: 285,054,490 tokens" />
-<img src="assets/harness-codex.svg" width="268" height="56" alt="Codex: 153,473,191 tokens" />
+<img src="assets/harness-antigravity.svg" width="268" height="56" alt="Antigravity: 288,538,076 tokens" />
+<img src="assets/harness-codex.svg" width="268" height="56" alt="Codex: 154,909,058 tokens" />
 <img src="assets/harness-hermes.svg" width="268" height="56" alt="Hermes: 62,400,435 tokens" />
 <img src="assets/harness-junie.svg" width="268" height="56" alt="Junie: 38,633,420 tokens" />
 <img src="assets/harness-claude.svg" width="268" height="56" alt="Claude Code: 1,171,973 tokens" />
@@ -22,22 +22,22 @@
 <img src="assets/harness-kilo.svg" width="268" height="56" alt="Kilo: 413,075 tokens" />
 <img src="assets/harness-opencode.svg" width="268" height="56" alt="OpenCode: 248,289 tokens" />
 </p>
-<p>Usage data from <a href="https://github.com/Javis603/token-monitor">Token Monitor</a> · 26 Nov 2026, 21:24 UTC</p>
+<p>Usage data from <a href="https://github.com/Javis603/token-monitor">Token Monitor</a> · 26 Nov 2026, 21:40 UTC</p>
 <p>
 <img src="assets/daily-tokens.svg" width="382" alt="Daily tokens. Peak on 23 Nov: 665,312,738 tokens." />
-<img src="assets/weekly-tokens.svg" width="382" alt="Weekly tokens. Peak on 23 Nov: 1,824,474,656 tokens." />
-<img src="assets/monthly-tokens.svg" width="382" alt="Monthly tokens. Peak on 01 Nov: 3,296,898,308 tokens." />
+<img src="assets/weekly-tokens.svg" width="382" alt="Weekly tokens. Peak on 23 Nov: 1,829,394,109 tokens." />
+<img src="assets/monthly-tokens.svg" width="382" alt="Monthly tokens. Peak on 01 Nov: 3,301,817,761 tokens." />
 </p>
 <details>
 <summary>Show estimated costs · daily, weekly and monthly</summary>
 <p><img src="assets/daily-cost.svg" width="382" alt="Estimated daily cost. Peak on 23 Nov: USD 202.69." />
-<img src="assets/weekly-cost.svg" width="382" alt="Estimated weekly cost. Peak on 23 Nov: USD 460.44." />
-<img src="assets/monthly-cost.svg" width="382" alt="Estimated monthly cost. Peak on 01 Nov: USD 755.98." /></p>
+<img src="assets/weekly-cost.svg" width="382" alt="Estimated weekly cost. Peak on 23 Nov: USD 462.33." />
+<img src="assets/monthly-cost.svg" width="382" alt="Estimated monthly cost. Peak on 01 Nov: USD 757.88." /></p>
 </details>
 <details>
 <summary>Activity calendar and token totals</summary>
 <p><img src="assets/activity.svg" width="382" alt="Activity by day. 24 days with records. Outlined cells have no record." /></p>
-<p>658.3M today · 3.3B this month · 3.36B all time</p>
+<p>663.6M today · 3.31B this month · 3.37B all time</p>
 </details>
 
 <h2>Toolbox</h2>

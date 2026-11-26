@@ -2,6 +2,7 @@
 import base64
 import html
 import json
+import os
 import re
 import sys
 from usage_charts import charts
@@ -15,7 +16,8 @@ OUT = ROOT
 ASSETS = OUT / "assets"
 SOURCE = ROOT
 ASSETS.mkdir(parents=True, exist_ok=True)
-export = json.loads(Path("${USERPROFILE}/usage-registry/token-monitor-export.json").read_text(encoding="utf-8-sig"))
+export_path = Path(os.environ.get("TOKEN_MONITOR_EXPORT", Path.home() / "usage-registry" / "token-monitor-export.json"))
+export = json.loads(export_path.read_text(encoding="utf-8-sig"))
 stamp = datetime.fromisoformat(export["generatedAt"].replace("Z", "+00:00")).astimezone(timezone.utc)
 period = next(row for row in export["monthly"] if row["month"] == stamp.strftime("%Y-%m"))
 clients = sorted(((k, v["tokens"]) for k, v in period["perClient"].items() if k != "unknown" and v["tokens"] > 0), key=lambda kv: (-kv[1], kv[0]))
