@@ -2,7 +2,7 @@
 # Daily token telemetry refresh: render SVGs from local token monitor export, commit if changed, push.
 cd "$(dirname "$0")"
 python render_token_card.py || exit 1
-git add token-card-dark.svg token-card-light.svg
+git add token-card.svg
 if git diff --cached --quiet; then
   echo "sin cambios — nada que commitear"
   exit 0

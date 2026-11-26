@@ -1,20 +1,5 @@
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="dark_mode.svg?v=card" />
-  <source media="(prefers-color-scheme: light)" srcset="light_mode.svg?v=card" />
-  <img alt="jseramn's GitHub profile" src="dark_mode.svg?v=card" width="100%" />
-</picture>
-<br />
-
-<p align="left">
-<b>$ whoami</b><br />
-building agentic systems — mostly in private (client systems + products in the lab)<br />
-contributing in public: <a href="https://github.com/Get-Concord-AI/concord-mcp">concord-mcp</a> — live messaging infrastructure for coding agents
-</p>
-
-<p align="left"><b>$ ai-telemetry</b> — tokens burned orchestrating agents, refreshed every 24h</p>
-
-<picture>
-  <img alt="AI token telemetry — tokens per day, per agent, all-time" src="token-card.svg" width="100%" />
+  <img alt="jseramn — agentic systems builder. live ai token telemetry, refreshed every 24h" src="token-card.svg" width="100%" />
 </picture>
 
 <p align="left"><b>languages</b></p>
