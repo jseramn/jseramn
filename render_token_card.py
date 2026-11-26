@@ -1,62 +1,31 @@
 #!/usr/bin/env python3
 """
-Blueprint-brutalist profile card generator for jseramn/jseramn.
-Composite card: halftone portrait + neofetch + whoami + KPI grid +
-24-day token chart + agent ranking. Zero rounded corners (rx=0),
-24px blueprint grid, calibration corner brackets.
-
-Theme switching: set THEME below (or env CARD_THEME) to one of:
-  1_industrial_concrete_original | 2_high_glow_cyberpunk |
-  3_forest_terminal | 4_oceanic_matrix
+Renderiza token-card.svg desde el export del token monitor.
+Sistema de tokens de diseno del perfil:
+  neon-blue #0E76FD / neon-purple #823CFA / warm-amber #B67E5A
+  ice-white #E0E6ED / abyss-navy #0D172A / void-black #131317
 """
 import json
-import os
+import math
+import os.path
 from datetime import datetime
 
 EXPORT_PATH = r"${USERPROFILE}/usage-registry/token-monitor-export.json"
-AVATAR_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "avatar-src.png")
 
-THEME = os.environ.get("CARD_THEME", "2_high_glow_cyberpunk")
+W, H = 1000, 400
 
-ARCH = {
-    "borderRadius": 0,
-    "gridSize": 24,
-    "bracketSizeLarge": 12,
-    "bracketThicknessLarge": 2,
-    "bracketSizeSmall": 6,
-    "bracketThicknessSmall": 1,
-    "fontFamily": "'JetBrains Mono','Geist Mono','Fira Code',monospace",
-}
+# CAPA 1+2: tokens primitivos -> semanticos
+NEON_BLUE = "#0E76FD"
+NEON_PURPLE = "#823CFA"
+WARM_AMBER = "#B67E5A"
+ICE_WHITE = "#E0E6ED"
+ABYSS_NAVY = "#0D172A"
+VOID_BLACK = "#131317"
+TEXT_SECONDARY = "#94A3B8"
+SURFACE_ELEVATED = "#162238"
 
-THEMES = {
-    "1_industrial_concrete_original": {
-        "bg_canvas": "#14171A", "bg_surface": "#1C2126", "bg_elevated": "#252B32",
-        "grid_line": "rgba(148,163,184,0.14)", "border_technical": "#38414A",
-        "text_primary": "#F1F5F9", "text_secondary": "#94A3B8",
-        "accent_primary": "#5B8DEF", "accent_secondary": "#6366F1", "accent_alert": "#F97316",
-    },
-    "2_high_glow_cyberpunk": {
-        "bg_canvas": "#08090C", "bg_surface": "#0E1118", "bg_elevated": "#151A26",
-        "grid_line": "rgba(130,60,250,0.18)", "border_technical": "rgba(130,60,250,0.45)",
-        "text_primary": "#F1F5F9", "text_secondary": "#94A3B8",
-        "accent_primary": "#0E76FD", "accent_secondary": "#823CFA", "accent_alert": "#FF2A9E",
-    },
-    "3_forest_terminal": {
-        "bg_canvas": "#0B0D0C", "bg_surface": "#121614", "bg_elevated": "#1A201D",
-        "grid_line": "rgba(52,211,153,0.14)", "border_technical": "rgba(16,185,129,0.35)",
-        "text_primary": "#D1FAE5", "text_secondary": "#6EE7B7",
-        "accent_primary": "#10B981", "accent_secondary": "#059669", "accent_alert": "#F59E0B",
-    },
-    "4_oceanic_matrix": {
-        "bg_canvas": "#0F172A", "bg_surface": "#1E293B", "bg_elevated": "#273549",
-        "grid_line": "rgba(148,163,184,0.16)", "border_technical": "rgba(6,182,212,0.40)",
-        "text_primary": "#F8FAFC", "text_secondary": "#94A3B8",
-        "accent_primary": "#06B6D4", "accent_secondary": "#38BDF8", "accent_alert": "#FB7185",
-    },
-}
-
-W, H = 1100, 690
-FONT = ARCH["fontFamily"]
+# por agente: rotacion de acentos del sistema (el top agente es neon-purple por jerarquia)
+AGENT_ROTATION = [NEON_PURPLE, NEON_BLUE, NEON_BLUE, NEON_BLUE, NEON_BLUE, NEON_BLUE]
 
 
 def fmt_tokens(n):
@@ -73,26 +42,7 @@ def esc(s):
     return str(s).replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
 
 
-def hexmix(c1, c2, t):
-    a = [int(c1[i:i+2], 16) for i in (1, 3, 5)]
-    b = [int(c2[i:i+2], 16) for i in (1, 3, 5)]
-    return "#{:02x}{:02x}{:02x}".format(*[round(a[i] + (b[i] - a[i]) * t) for i in range(3)])
-
-
-def brackets(x, y, w, h, size, thick, color):
-    """Calibration L-brackets at the 4 corners of rect (x,y,w,h)."""
-    s, t = size, thick
-    c = []
-    for cx, cy, dx, dy in ((x, y, 1, 1), (x + w, y, -1, 1), (x, y + h, 1, -1), (x + w, y + h, -1, -1)):
-        c.append(
-            f'<path d="M{cx + dx*s} {cy} L{cx} {cy} L{cx} {cy + dy*s}" '
-            f'fill="none" stroke="{color}" stroke-width="{t}"/>'
-        )
-    return "".join(c)
-
-
-def render(data, theme_key):
-    t = THEMES[theme_key]
+def render(data):
     snap = data["snapshot"]
     daily = data["daily"][-24:]
     monthly = data["monthly"]
@@ -109,158 +59,124 @@ def render(data, theme_key):
 
     gen = data.get("generatedAt", "")
     try:
-        stamp = datetime.fromisoformat(gen.replace("Z", "+00:00")).strftime("%Y-%m-%d %H:%M UTC")
+        gen_dt = datetime.fromisoformat(gen.replace("Z", "+00:00"))
+        stamp = gen_dt.strftime("%Y-%m-%d %H:%M UTC")
     except Exception:
         stamp = gen[:16]
 
-    g = ARCH["gridSize"]
-    out = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" aria-label="jseramn blueprint profile card">']
+    mono = "'Consolas','Menlo','DejaVu Sans Mono',monospace"
+    out = []
+    out.append(f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" aria-label="AI token telemetry for jseramn">')
 
-    # defs: 24px blueprint grid + diagonal hatch for secondary bars
+    # defs: glow filters + gradientes
     out.append(f'''<defs>
-  <pattern id="grid" width="{g}" height="{g}" patternUnits="userSpaceOnUse">
-    <path d="M{g} 0 L0 0 0 {g}" fill="none" stroke="{t["grid_line"]}" stroke-width="1"/>
-  </pattern>
-  <pattern id="hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
-    <line x1="0" y1="0" x2="0" y2="6" stroke="{t["accent_alert"]}" stroke-width="1.4" opacity="0.75"/>
-  </pattern>
+  <filter id="glow-blue" x="-60%" y="-60%" width="220%" height="220%">
+    <feGaussianBlur stdDeviation="5" result="b"/>
+    <feFlood flood-color="{NEON_BLUE}" flood-opacity="0.55" result="c"/>
+    <feComposite in="c" in2="b" operator="in" result="glow"/>
+    <feMerge><feMergeNode in="glow"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+  <filter id="glow-purple" x="-60%" y="-60%" width="220%" height="220%">
+    <feGaussianBlur stdDeviation="5" result="b"/>
+    <feFlood flood-color="{NEON_PURPLE}" flood-opacity="0.6" result="c"/>
+    <feComposite in="c" in2="b" operator="in" result="glow"/>
+    <feMerge><feMergeNode in="glow"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+  <filter id="glow-amber" x="-60%" y="-60%" width="220%" height="220%">
+    <feGaussianBlur stdDeviation="4" result="b"/>
+    <feFlood flood-color="{WARM_AMBER}" flood-opacity="0.55" result="c"/>
+    <feComposite in="c" in2="b" operator="in" result="glow"/>
+    <feMerge><feMergeNode in="glow"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+  <linearGradient id="bar-grad" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="{NEON_BLUE}" stop-opacity="1"/>
+    <stop offset="1" stop-color="{NEON_BLUE}" stop-opacity="0.45"/>
+  </linearGradient>
+  <linearGradient id="card-sheen" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="{NEON_PURPLE}" stop-opacity="0.10"/>
+    <stop offset="0.35" stop-color="{NEON_PURPLE}" stop-opacity="0"/>
+  </linearGradient>
 </defs>''')
 
-    # canvas
-    out.append(f'<rect width="{W}" height="{H}" fill="{t["bg_canvas"]}"/>')
+    # superficie: abyss-navy sobre void, borde glow purple (border-glow del sistema)
+    out.append(f'<rect x="0.5" y="0.5" width="{W-1}" height="{H-1}" rx="8" fill="{ABYSS_NAVY}" stroke="{NEON_PURPLE}" stroke-opacity="0.45"/>')
+    out.append(f'<rect x="0.5" y="0.5" width="{W-1}" height="{H-1}" rx="8" fill="url(#card-sheen)"/>')
 
-    # ---- header strip
-    out.append(f'<text x="28" y="38" font-family="{FONT}" font-size="17" font-weight="700" fill="{t["accent_primary"]}">jseramn@github</text>')
-    out.append(f'<text x="{W-28}" y="38" text-anchor="end" font-family="{FONT}" font-size="11" letter-spacing="0.08em" fill="{t["text_secondary"]}">$ ai-telemetry --live &#9654; {esc(stamp)}</text>')
-    out.append(f'<line x1="28" y1="52" x2="{W-28}" y2="52" stroke="{t["border_technical"]}" stroke-width="1"/>')
+    # ---- header ----
+    out.append(f'<text x="28" y="38" fill="{NEON_BLUE}" font-family="{mono}" font-size="15" font-weight="bold" filter="url(#glow-blue)">$ ai-telemetry --live</text>')
+    out.append(f'<text x="972" y="38" fill="{TEXT_SECONDARY}" font-family="{mono}" font-size="11" text-anchor="end">updated {esc(stamp)} · refreshes every 24h</text>')
 
-    # ---- ROW 1: portrait / neofetch / whoami  (y 64..244)
-    r1y, r1h = 64, 180
-    # neofetch panel (sin retrato: el avatar de github ya cumple ese rol)
-    nx, nw = 28, 500
-    out.append(f'<rect x="{nx}" y="{r1y}" width="{nw}" height="{r1h}" fill="{t["bg_surface"]}"/>')
-    out.append(f'<rect x="{nx}" y="{r1y}" width="{nw}" height="{r1h}" fill="url(#grid)"/>')
-    out.append(f'<rect x="{nx}" y="{r1y}" width="{nw}" height="{r1h}" fill="none" stroke="{t["border_technical"]}" stroke-width="1"/>')
-    out.append(brackets(nx + 5, r1y + 5, nw - 10, r1h - 10, ARCH["bracketSizeSmall"], ARCH["bracketThicknessSmall"], t["border_technical"]))
-    neo = [
-        ("os", "windows 11 x64"),
-        ("role", "agentic systems builder"),
-        ("location", "colombia"),
-        ("uptime", "4y on github"),
-        ("web", "jseramn.tech"),
-        ("shell", "multi-agent harness"),
-        ("harnesses", "devin codex claude junie +5"),
+    # ---- hero metrics ----
+    hero_y = 92
+    n_agents = len(per_client)
+    heroes = [
+        ("ALL-TIME TOKENS", fmt_tokens(alltime_tokens), f"${alltime_cost:,.0f} usd", NEON_BLUE, "glow-blue"),
+        ("THIS MONTH", fmt_tokens(month_tokens), f"${month_cost:,.0f} usd", NEON_PURPLE, "glow-purple"),
+        ("TODAY", fmt_tokens(today_tokens), f"${today_cost:,.2f} usd", WARM_AMBER, "glow-amber"),
+        ("AGENTS ORCHESTRATED", str(n_agents), "this month", ICE_WHITE, None),
     ]
-    for i, (k, v) in enumerate(neo):
-        yy = r1y + 30 + i * 22
-        out.append(f'<text x="{nx+18}" y="{yy}" font-family="{FONT}" font-size="12.5" fill="{t["accent_primary"]}">{esc(k)}</text>')
-        out.append(f'<text x="{nx+130}" y="{yy}" font-family="{FONT}" font-size="12.5" fill="{t["text_primary"]}">{esc(v)}</text>')
+    for i, (label, big, sub, color, glow) in enumerate(heroes):
+        x = 28 + i * 245
+        out.append(f'<text x="{x}" y="{hero_y - 22}" fill="{TEXT_SECONDARY}" font-family="{mono}" font-size="11" letter-spacing="2">{label}</text>')
+        filt = f' filter="url(#{glow})"' if glow else ""
+        out.append(f'<text x="{x}" y="{hero_y + 16}" fill="{color}" font-family="{mono}" font-size="36" font-weight="bold"{filt}>{big}</text>')
+        out.append(f'<text x="{x}" y="{hero_y + 40}" fill="{TEXT_SECONDARY}" font-family="{mono}" font-size="12">{sub}</text>')
 
-    # whoami panel
-    wx = nx + nw + 24
-    ww = W - 28 - wx
-    out.append(f'<rect x="{wx}" y="{r1y}" width="{ww}" height="{r1h}" fill="{t["bg_surface"]}"/>')
-    out.append(f'<rect x="{wx}" y="{r1y}" width="{ww}" height="{r1h}" fill="url(#grid)"/>')
-    out.append(f'<rect x="{wx}" y="{r1y}" width="{ww}" height="{r1h}" fill="none" stroke="{t["border_technical"]}" stroke-width="1"/>')
-    out.append(brackets(wx + 5, r1y + 5, ww - 10, r1h - 10, ARCH["bracketSizeSmall"], ARCH["bracketThicknessSmall"], t["border_technical"]))
-    out.append(f'<text x="{wx+18}" y="{r1y+30}" font-family="{FONT}" font-size="12.5" font-weight="700" fill="{t["accent_primary"]}">$ whoami</text>')
-    who = [
-        "building agentic systems —",
-        "mostly in private.",
-        "",
-        "contributing in public:",
-        "concord-mcp · gentle-ai",
-        "",
-        "rendering human thoughts",
-        "into synthetic machines",
-    ]
-    for i, line in enumerate(who):
-        out.append(f'<text x="{wx+18}" y="{r1y+56+i*17}" font-family="{FONT}" font-size="12" fill="{t["text_secondary"]}">{esc(line)}</text>')
+    # divider sutil (border-subtle del sistema)
+    out.append(f'<line x1="28" y1="158" x2="972" y2="158" stroke="{ICE_WHITE}" stroke-opacity="0.12" stroke-width="1"/>')
 
-    # ---- ROW 2: KPI cards (y 256..352)
-    ky, kh = 256, 96
-    gap = 16
-    kw = (W - 56 - 3 * gap) / 4
-    kpis = [
-        ("ALL-TIME TOKENS", fmt_tokens(alltime_tokens), f"${alltime_cost:,.0f} usd", t["text_primary"], t["text_secondary"]),
-        ("THIS MONTH", fmt_tokens(month_tokens), f"${month_cost:,.0f} usd", t["text_primary"], t["text_secondary"]),
-        ("TODAY", fmt_tokens(today_tokens), f"${today_cost:,.2f} usd", t["accent_alert"], t["accent_alert"]),
-        ("AGENTS ORCHESTRATED", str(len(per_client)), "active this month", t["text_primary"], t["text_secondary"]),
-    ]
-    for i, (label, big, sub, bigc, subc) in enumerate(kpis):
-        x = 28 + i * (kw + gap)
-        out.append(f'<rect x="{x}" y="{ky}" width="{kw}" height="{kh}" fill="{t["bg_surface"]}"/>')
-        out.append(f'<rect x="{x}" y="{ky}" width="{kw}" height="{kh}" fill="url(#grid)"/>')
-        out.append(f'<rect x="{x}" y="{ky}" width="{kw}" height="{kh}" fill="none" stroke="{t["border_technical"]}" stroke-width="1"/>')
-        out.append(brackets(x - 3, ky - 3, kw + 6, kh + 6, ARCH["bracketSizeLarge"], ARCH["bracketThicknessLarge"], t["accent_alert"]))
-        out.append(f'<text x="{x+14}" y="{ky+24}" font-family="{FONT}" font-size="11" letter-spacing="0.08em" fill="{t["text_secondary"]}">{esc(label)}</text>')
-        out.append(f'<text x="{x+14}" y="{ky+62}" font-family="{FONT}" font-size="32" font-weight="700" fill="{bigc}">{esc(big)}</text>')
-        out.append(f'<text x="{x+kw-14}" y="{ky+84}" text-anchor="end" font-family="{FONT}" font-size="11" fill="{subc}">{esc(sub)}</text>')
-
-    # ---- ROW 3: 24-day chart (y 364..496)
-    cy, ch_h = 364, 132
-    cw = W - 56
-    out.append(f'<rect x="28" y="{cy}" width="{cw}" height="{ch_h}" fill="{t["bg_surface"]}"/>')
-    out.append(f'<rect x="28" y="{cy}" width="{cw}" height="{ch_h}" fill="url(#grid)"/>')
-    out.append(f'<rect x="28" y="{cy}" width="{cw}" height="{ch_h}" fill="none" stroke="{t["border_technical"]}" stroke-width="1"/>')
-    out.append(f'<text x="42" y="{cy+22}" font-family="{FONT}" font-size="11" letter-spacing="0.08em" fill="{t["text_secondary"]}">DAILY TOKENS — LAST 24 DAYS</text>')
-    chart_x, chart_y = 42, cy + 32
-    chart_w, chart_h = cw - 28, ch_h - 48
+    # ---- daily bar chart ----
+    chart_x, chart_y, chart_w, chart_h = 28, 250, 560, 100
+    out.append(f'<text x="{chart_x}" y="{chart_y - 12}" fill="{TEXT_SECONDARY}" font-family="{mono}" font-size="11" letter-spacing="2">DAILY TOKENS — LAST {len(daily)} ACTIVE DAYS</text>')
     max_tok = max((d["tokens"] for d in daily), default=1) or 1
     n = len(daily)
-    bgap = 5
-    bw = (chart_w - bgap * (n - 1)) / n
-    peak_thresh = max_tok * 0.85
+    gap = 4
+    bw = (chart_w - gap * (n - 1)) / n
     for i, d in enumerate(daily):
         h = max(2, (d["tokens"] / max_tok) * chart_h)
-        x = chart_x + i * (bw + bgap)
+        x = chart_x + i * (bw + gap)
         y = chart_y + chart_h - h
-        color = t["accent_alert"] if d["tokens"] >= peak_thresh else t["accent_primary"]
-        op = "1" if d["tokens"] >= peak_thresh else "0.8"
-        out.append(f'<rect x="{x:.1f}" y="{y:.1f}" width="{bw:.1f}" height="{h:.1f}" fill="{color}" opacity="{op}"/>')
+        if i == n - 1:
+            # hoy: amber con glow
+            out.append(f'<rect x="{x:.1f}" y="{y:.1f}" width="{bw:.1f}" height="{h:.1f}" rx="1.5" fill="{WARM_AMBER}" filter="url(#glow-amber)"/>')
+        else:
+            out.append(f'<rect x="{x:.1f}" y="{y:.1f}" width="{bw:.1f}" height="{h:.1f}" rx="1.5" fill="url(#bar-grad)"/>')
+    out.append(f'<line x1="{chart_x}" y1="{chart_y + chart_h}" x2="{chart_x + chart_w}" y2="{chart_y + chart_h}" stroke="{ICE_WHITE}" stroke-opacity="0.12" stroke-width="1"/>')
+    out.append(f'<text x="{chart_x}" y="{chart_y + chart_h + 18}" fill="{TEXT_SECONDARY}" font-family="{mono}" font-size="10">{esc(daily[0]["date"][5:]) if daily else ""}</text>')
+    out.append(f'<text x="{chart_x + chart_w}" y="{chart_y + chart_h + 18}" fill="{TEXT_SECONDARY}" font-family="{mono}" font-size="10" text-anchor="end">{esc(daily[-1]["date"][5:]) if daily else ""} · peak {fmt_tokens(max_tok)}</text>')
 
-    # ---- ROW 4: agents panel (y 508..670)
-    ay, ah = 508, 158
-    aw = W - 56
-    out.append(f'<rect x="28" y="{ay}" width="{aw}" height="{ah}" fill="{t["bg_surface"]}"/>')
-    out.append(f'<rect x="28" y="{ay}" width="{aw}" height="{ah}" fill="url(#grid)"/>')
-    out.append(f'<rect x="28" y="{ay}" width="{aw}" height="{ah}" fill="none" stroke="{t["border_technical"]}" stroke-width="1"/>')
-    out.append(brackets(25, ay - 3, aw + 6, ah + 6, ARCH["bracketSizeLarge"], ARCH["bracketThicknessLarge"], t["accent_alert"]))
-    out.append(f'<text x="42" y="{ay+22}" font-family="{FONT}" font-size="11" letter-spacing="0.08em" fill="{t["text_secondary"]}">THIS MONTH BY AGENT</text>')
-    if clients:
-        maxa = clients[0][1]["tokens"] or 1
-        row_h = 20
-        bar_x = 150
-        bar_maxw = aw - 150 - 130 - 40
-        for i, (name, v) in enumerate(clients):
-            yy = ay + 44 + i * row_h
-            out.append(f'<text x="42" y="{yy+9}" font-family="{FONT}" font-size="12" fill="{t["text_primary"]}">{esc(name)}</text>')
-            wlen = max(3, (v["tokens"] / maxa) * bar_maxw)
-            if i == 0:
-                out.append(f'<rect x="{bar_x}" y="{yy}" width="{wlen:.0f}" height="12" fill="{t["accent_secondary"]}"/>')
-            else:
-                out.append(f'<rect x="{bar_x}" y="{yy}" width="{wlen:.0f}" height="12" fill="{t["bg_elevated"]}"/>')
-                out.append(f'<rect x="{bar_x}" y="{yy}" width="{wlen:.0f}" height="12" fill="url(#hatch)"/>')
-            out.append(f'<text x="{bar_x+bar_maxw+12}" y="{yy+10}" font-family="{FONT}" font-size="12" text-anchor="start" fill="{t["text_primary"]}">{fmt_tokens(v["tokens"])}</text>')
+    # ---- per-client bars (escala log, valores right-aligned) ----
+    cx, cy = 640, 250
+    val_x = 962
+    bar_max_w = 130
+    out.append(f'<text x="{cx}" y="{cy - 12}" fill="{TEXT_SECONDARY}" font-family="{mono}" font-size="11" letter-spacing="2">THIS MONTH BY AGENT (log)</text>')
+    max_ct = max((v["tokens"] for _, v in clients), default=1) or 1
+    row_h = 21
+    for i, (name, v) in enumerate(clients):
+        y = cy + 8 + i * row_h
+        color = AGENT_ROTATION[i] if i < len(AGENT_ROTATION) else NEON_BLUE
+        bar_w = max(2, (math.log10(v["tokens"] + 1) / math.log10(max_ct + 1)) * bar_max_w)
+        out.append(f'<text x="{cx}" y="{y + 11}" fill="{ICE_WHITE}" font-family="{mono}" font-size="11">{esc(name[:12])}</text>')
+        glow = ' filter="url(#glow-purple)"' if i == 0 else ""
+        out.append(f'<rect x="{cx + 100}" y="{y}" width="{bar_w:.1f}" height="13" rx="2" fill="{color}" opacity="0.9"{glow}/>')
+        out.append(f'<text x="{val_x}" y="{y + 11}" fill="{TEXT_SECONDARY}" font-family="{mono}" font-size="10" text-anchor="end">{fmt_tokens(v["tokens"])}</text>')
 
-    out.append('</svg>')
-    return "".join(out)
+    # ---- footer ----
+    fy = H - 18
+    out.append(f'<text x="28" y="{fy}" fill="{TEXT_SECONDARY}" font-family="{mono}" font-size="10">tokens measured across local agent sessions · source: private token monitor</text>')
+
+    out.append("</svg>")
+    return "\n".join(out)
 
 
 def main():
-    data = json.load(open(EXPORT_PATH, encoding="utf-8"))
-    here = os.path.dirname(os.path.abspath(__file__))
-
-    svg = render(data, THEME)
-    with open(os.path.join(here, "token-card.svg"), "w", encoding="utf-8") as f:
+    with open(EXPORT_PATH, encoding="utf-8") as f:
+        data = json.load(f)
+    svg = render(data)
+    path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "token-card.svg")
+    with open(path, "w", encoding="utf-8") as f:
         f.write(svg)
-
-    os.makedirs(os.path.join(here, "themes"), exist_ok=True)
-    for key in THEMES:
-        with open(os.path.join(here, "themes", f"token-card-{key}.svg"), "w", encoding="utf-8") as f:
-            f.write(render(data, key))
-
-    print(f"rendered: token-card.svg [{THEME}] + {len(THEMES)} theme previews")
+    print(f"OK {path} ({len(svg)} bytes)")
 
 
 if __name__ == "__main__":
