@@ -87,7 +87,9 @@ token_charts, cost_charts, heat = charts(OUT, export, clients, names, compact)
 snap = export["snapshot"]
 totals = " · ".join(f'<strong>{compact(snap[key]["totalTokens"])}</strong> {label} (${snap[key]["costUsd"]:,.2f})' for key,label in [("today","today"),("month","this month"),("allTime","all time")])
 source_link = link("Token Monitor", "https://github.com/Javis603/token-monitor")
-body = f'''<h1>I build tools for coding harnesses.</h1>
+body = f'''<img src="assets/banner.png" alt="Coding harness streams converge into a shared workspace" width="100%" />
+
+<h1>I build tools for coding harnesses.</h1>
 <p>Most of my client work and product development happens in private. In public, I contribute to {link("Concord MCP",repo)}, to help developers coordinate work across coding harnesses.</p>
 
 <h2>Open source contributions</h2>

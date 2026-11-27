@@ -1,3 +1,5 @@
+<img src="assets/banner.png" alt="Coding harness streams converge into a shared workspace" width="100%" />
+
 <h1>I build tools for coding harnesses.</h1>
 <p>Most of my client work and product development happens in private. In public, I contribute to <a href="https://github.com/Get-Concord-AI/concord-mcp">Concord MCP</a>, to help developers coordinate work across coding harnesses.</p>
 
