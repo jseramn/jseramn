@@ -21,7 +21,14 @@ jobs:
           import re
           readme = Path("README.md").read_text()
           for asset in re.findall(r'<img src="(assets/[^"]+)"', readme):
-              ElementTree.parse(asset)
+              path = Path(asset)
+              assert path.is_file() and path.stat().st_size < 5 * 1024 * 1024, path
+              if path.suffix == ".svg":
+                  ElementTree.parse(path)
+              elif path.suffix == ".png":
+                  assert path.read_bytes().startswith(b"\x89PNG\r\n\x1a\n"), path
+              else:
+                  raise AssertionError(f"Unsupported README image: {path}")
           for path in (Path("update-telemetry.bat"), Path("scripts/render_profile.py"), Path("render_token_card.py")):
               assert not re.search(r"C:[/\\]Users[/\\]|/c/Users/", path.read_text(), re.I), path
           print("Profile assets and paths verified")
