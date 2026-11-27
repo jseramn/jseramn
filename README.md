@@ -14,9 +14,9 @@
 <h2>Harnesses in my workflow</h2>
 <p><strong>9 active harnesses</strong> · Monthly tokens · November 2026</p>
 <p>
-<img src="assets/harness-devin.svg" width="268" height="56" alt="Devin: 2,755,002,809 tokens" />
-<img src="assets/harness-antigravity.svg" width="268" height="56" alt="Antigravity: 288,538,076 tokens" />
-<img src="assets/harness-codex.svg" width="268" height="56" alt="Codex: 154,909,058 tokens" />
+<img src="assets/harness-devin.svg" width="268" height="56" alt="Devin: 2,878,860,884 tokens" />
+<img src="assets/harness-antigravity.svg" width="268" height="56" alt="Antigravity: 380,709,901 tokens" />
+<img src="assets/harness-codex.svg" width="268" height="56" alt="Codex: 199,755,819 tokens" />
 <img src="assets/harness-hermes.svg" width="268" height="56" alt="Hermes: 62,400,435 tokens" />
 <img src="assets/harness-junie.svg" width="268" height="56" alt="Junie: 38,633,420 tokens" />
 <img src="assets/harness-claude.svg" width="268" height="56" alt="Claude Code: 1,171,973 tokens" />
@@ -24,22 +24,29 @@
 <img src="assets/harness-kilo.svg" width="268" height="56" alt="Kilo: 413,075 tokens" />
 <img src="assets/harness-opencode.svg" width="268" height="56" alt="OpenCode: 248,289 tokens" />
 </p>
-<p>Usage data from <a href="https://github.com/Javis603/token-monitor">Token Monitor</a> · 26 Nov 2026, 21:40 UTC</p>
+<h2>Models in my workflow</h2>
+<p><strong>30 identified models</strong> · Monthly tokens · November 2026</p>
+<p><img src="assets/model-usage.svg" width="760" alt="Most used models. 30 identified models in November 2026, ranked by monthly tokens. swe-2-flash-max: 1,760,312,901; swe-2-1-max: 608,164,540; gemini-4-neon: 334,755,141; swe-2-high: 160,500,143; swe-2-flash-medium: 156,806,462; swe-2-flash-high: 154,991,200; gpt-6.1-terra: 88,498,347; upstage/solar-mini4:free: 62,400,435; gpt-6.2-astra: 51,084,140; gpt-6-sol: 48,139,827; qwen/qwen3.6-27b-fp8: 38,633,420; gemini-3.8-flash-n: 16,469,979" /></p>
+<details>
+<summary>Explore all 30 models</summary>
+<p><img src="assets/model-breakdown.svg" width="760" alt="All identified models. 30 identified models in November 2026, ranked by monthly tokens. swe-2-flash-max: 1,760,312,901; swe-2-1-max: 608,164,540; gemini-4-neon: 334,755,141; swe-2-high: 160,500,143; swe-2-flash-medium: 156,806,462; swe-2-flash-high: 154,991,200; gpt-6.1-terra: 88,498,347; upstage/solar-mini4:free: 62,400,435; gpt-6.2-astra: 51,084,140; gpt-6-sol: 48,139,827; qwen/qwen3.6-27b-fp8: 38,633,420; gemini-3.8-flash-n: 16,469,979; claude-sonnet-5-5: 9,129,383; claude-fable-5-2-max: 8,669,108; gpt-6.2-sol: 8,272,467; grok-4-7-xhigh: 6,819,184; gemini-4-argon-trial: 6,338,733; gemini-4-hydrogen: 6,289,871; swe-2-1-high: 5,599,766; gemini-4-hydrogen-tiered-high: 5,199,299; claude-haiku-5-5-high: 5,027,384; gemini-4-neon-xhigh: 4,473,103; gpt-6-luna: 3,761,038; claude-opus-5-5: 2,527,495; claude-haiku-5-5: 1,171,973; grok-4.7: 500,626; google/gemini-3-pro-image: 340,364; anthropic/claude-haiku-5-5: 248,289; grok-4-7-low: 201,776; anthropic/claude-haiku-4-5: 72,711" /></p>
+</details>
+<p>Usage data from <a href="https://github.com/Javis603/token-monitor">Token Monitor</a> · 27 Nov 2026, 06:03 UTC</p>
 <p>
-<img src="assets/daily-tokens.svg" width="382" alt="Daily tokens. Peak on 23 Nov: 665,312,738 tokens." />
-<img src="assets/weekly-tokens.svg" width="382" alt="Weekly tokens. Peak on 23 Nov: 1,829,394,109 tokens." />
-<img src="assets/monthly-tokens.svg" width="382" alt="Monthly tokens. Peak on 01 Nov: 3,301,817,761 tokens." />
+<img src="assets/daily-tokens.svg" width="382" alt="Daily tokens. Peak on 26 Nov: 901,065,682 tokens." />
+<img src="assets/weekly-tokens.svg" width="382" alt="Weekly tokens. Peak on 23 Nov: 2,090,270,770 tokens." />
+<img src="assets/monthly-tokens.svg" width="382" alt="Monthly tokens. Peak on 01 Nov: 3,562,694,422 tokens." />
 </p>
 <details>
 <summary>Show estimated costs · daily, weekly and monthly</summary>
 <p><img src="assets/daily-cost.svg" width="382" alt="Estimated daily cost. Peak on 23 Nov: USD 202.69." />
-<img src="assets/weekly-cost.svg" width="382" alt="Estimated weekly cost. Peak on 23 Nov: USD 462.33." />
-<img src="assets/monthly-cost.svg" width="382" alt="Estimated monthly cost. Peak on 01 Nov: USD 757.88." /></p>
+<img src="assets/weekly-cost.svg" width="382" alt="Estimated weekly cost. Peak on 23 Nov: USD 528.15." />
+<img src="assets/monthly-cost.svg" width="382" alt="Estimated monthly cost. Peak on 01 Nov: USD 823.70." /></p>
 </details>
 <details>
 <summary>Activity calendar and token totals</summary>
-<p><img src="assets/activity.svg" width="382" alt="Activity by day. 24 days with records. Outlined cells have no record." /></p>
-<p>663.6M today · 3.31B this month · 3.37B all time</p>
+<p><img src="assets/activity.svg" width="382" alt="Activity by day. 25 days with records. Outlined cells have no record." /></p>
+<p>25.8M today · 3.57B this month · 3.63B all time</p>
 </details>
 
 <h2>Toolbox</h2>

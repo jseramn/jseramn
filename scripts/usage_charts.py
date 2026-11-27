@@ -139,3 +139,41 @@ def charts(out, export, clients, names, compact):
     total = sum(first<=d<=end for d in rows)
     heat = figure(out,"activity","Activity by day",f"{total} days with records. Outlined cells have no record.",p,height=202)
     return tokens, costs, heat
+
+
+def model_charts(out, models, month, compact):
+    """Render ranked model usage directly from Token Monitor's monthly perModel data."""
+    total = sum(tokens for _, tokens in models)
+    peak = models[0][1] if models else 1
+
+    def render(name, title, rows, remaining=0):
+        row_height = 29
+        y0 = 86
+        height = y0 + row_height * len(rows) + (36 if remaining else 29)
+        pieces = [label(20, 31, title, 20, INK, bold=True),
+                  label(20, 54, f"{month} · {len(models)} identified models · {compact(total)} tokens", 12)]
+        if not rows:
+            pieces.append(label(20, 112, "No identified model usage this month", 14))
+            return figure(out, name, title, "No identified model usage this month.", pieces, width=760, height=145)
+
+        x0, x1 = 285, 646
+        for index, (model, tokens) in enumerate(rows):
+            y = y0 + index * row_height
+            fill = PALETTE[index % 3]
+            bar = max(1.5, (x1 - x0) * tokens / peak)
+            pieces += [label(20, y + 4, model, 12, INK if index < 3 else MUTED, mono=True),
+                       f'<rect x="{x0}" y="{y-8}" width="{x1-x0}" height="11" fill="#202a3b"/>',
+                       f'<rect x="{x0}" y="{y-8}" width="{bar:.2f}" height="11" fill="{fill}"><title>{escape(model)}: {tokens:,} tokens</title></rect>',
+                       label(740, y + 4, compact(tokens), 12, INK, "end", mono=True)]
+        if remaining:
+            other_tokens = sum(tokens for _, tokens in models[len(rows):])
+            pieces.append(label(20, height - 15, f"{remaining} more models · {compact(other_tokens)} tokens in full breakdown", 12))
+        else:
+            pieces.append(label(20, height - 12, "Monthly token counts · Source: Token Monitor", 11))
+        desc = f"{len(models)} identified models in {month}, ranked by monthly tokens. " + "; ".join(
+            f"{model}: {tokens:,}" for model, tokens in rows)
+        return figure(out, name, title, desc, pieces, width=760, height=height)
+
+    preview = render("model-usage", "Most used models", models[:12], max(0, len(models) - 12))
+    full = render("model-breakdown", "All identified models", models)
+    return preview, full

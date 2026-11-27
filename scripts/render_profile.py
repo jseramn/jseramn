@@ -5,7 +5,7 @@ import json
 import os
 import re
 import sys
-from usage_charts import charts
+from usage_charts import charts, model_charts
 from datetime import datetime, timezone
 from pathlib import Path
 from zipfile import ZipFile, ZIP_DEFLATED
@@ -21,6 +21,10 @@ export = json.loads(export_path.read_text(encoding="utf-8-sig"))
 stamp = datetime.fromisoformat(export["generatedAt"].replace("Z", "+00:00")).astimezone(timezone.utc)
 period = next(row for row in export["monthly"] if row["month"] == stamp.strftime("%Y-%m"))
 clients = sorted(((k, v["tokens"]) for k, v in period["perClient"].items() if k != "unknown" and v["tokens"] > 0), key=lambda kv: (-kv[1], kv[0]))
+utility_models = {"unknown", "compactor", "summarizer"}
+models = sorted(((k, v["tokens"]) for k, v in period.get("perModel", {}).items()
+                 if k.lower() not in utility_models and v["tokens"] > 0),
+                key=lambda item: (-item[1], item[0]))
 names = {"devin":"Devin", "antigravity":"Antigravity", "codex":"Codex", "junie":"Junie", "hermes":"Hermes", "grok":"Grok Build", "kilo":"Kilo", "claude":"Claude Code", "opencode":"OpenCode"}
 e = html.escape
 
@@ -84,6 +88,7 @@ catalogue = re.findall(r'<p align="left"><b>(languages|stack|harnesses|workshop|
 assert len(catalogue) == 5
 tools = "\n".join(f'<p><strong>{group.capitalize()}</strong></p>\n<p>{contents}</p>' for group,contents in catalogue)
 token_charts, cost_charts, heat = charts(OUT, export, clients, names, compact)
+model_preview, model_breakdown = model_charts(OUT, models, month, compact)
 snap = export["snapshot"]
 totals = " · ".join(f'<strong>{compact(snap[key]["totalTokens"])}</strong> {label} (${snap[key]["costUsd"]:,.2f})' for key,label in [("today","today"),("month","this month"),("allTime","all time")])
 source_link = link("Token Monitor", "https://github.com/Javis603/token-monitor")
@@ -104,6 +109,13 @@ body = f'''<img src="assets/banner.png" alt="Coding harness streams converge int
 <p>
 {badges}
 </p>
+<h2>Models in my workflow</h2>
+<p><strong>{len(models)} identified models</strong> · Monthly tokens · {month}</p>
+<p>{model_preview}</p>
+<details>
+<summary>Explore all {len(models)} models</summary>
+<p>{model_breakdown}</p>
+</details>
 <p>Usage data from {source_link} · {stamp.strftime("%d %b %Y, %H:%M UTC")}</p>
 <p>
 {token_charts}
